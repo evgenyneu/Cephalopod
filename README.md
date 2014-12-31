@@ -35,7 +35,7 @@ I would create a fader property somewhere in my app and keep a strong reference 
 fader.fadeIn(duration: 3, velocity: 2)
 ```
 
-### Supply fade start/end volume and a completion callabck
+### Supply fade start/end volume, completion callback
 
 ```Swift
 fader.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished in
