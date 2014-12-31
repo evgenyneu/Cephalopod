@@ -156,7 +156,7 @@ public class iiFaderForAvAudioPlayer {
     return result
   }
 
-  // Graph: https://www.desmos.com/calculator/mvd9n5rrii
+  // Graph: https://www.desmos.com/calculator/wnstesdf0h
   public class func fadeOutVolumeMultiplier(timeFrom0To1: Double, velocity: Double) -> Double {
     var time = makeSureValueIsBetween0and1(timeFrom0To1)
     return pow(M_E, -velocity * time) * (1 - time)
