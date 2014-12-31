@@ -4,5 +4,5 @@
 
 ## Attribution
 
-The sound was recorded by Mike Koenig and downloaded from
-http://soundbible.com/1020-Weather-Alert.html
+The sound was recorded by Carlos Vallejo and downloaded from
+http://www.flashkit.com/loops/Easy_Listening/Ill_Be_-Carlos_V-10012/index.php

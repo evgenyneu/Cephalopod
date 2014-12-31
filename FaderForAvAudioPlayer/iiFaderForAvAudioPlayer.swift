@@ -17,7 +17,7 @@ public class iiFaderForAvAudioPlayer {
   let player: AVAudioPlayer
   private var timer: NSTimer?
 
-  private let stepsPerSecond = 100.0 // The higher the number - the higher the quality of fade
+  private let stepsPerSecond = 30.0 // The higher the number - the higher the quality of fade
   private var fadeIntervalSeconds = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds
   private var fadeVelocity = iiFaderForAvAudioPlayer_defaultVelocity
 
@@ -100,8 +100,6 @@ public class iiFaderForAvAudioPlayer {
 
       newVolume = toVolume - (toVolume - fromVolume) * volumeMultiplier
     }
-
-    println("Volume \(newVolume) mult: \(volumeMultiplier)")
 
     player.volume = Float(newVolume)
 

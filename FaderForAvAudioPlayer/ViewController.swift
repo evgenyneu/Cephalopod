@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-private let audioFileName = "weather_alert_sound_bible.mp3"
+private let audioFileName = "i_ll_be_waiting_carlos_vallejo.mp3"
 
 class ViewController: UIViewController {
   private var player: AVAudioPlayer?
@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     sliderParentView.backgroundColor = nil
     createControls()
     playSound(audioFileName)
+    player?.volume = 0
+    fadeIn()
   }
 
   private func createControls() {
@@ -29,7 +31,25 @@ class ViewController: UIViewController {
       delegate: nil, superview: sliderParentView)
   }
 
+  @IBAction func onFadeInTapped(sender: AnyObject) {
+    fadeIn()
+  }
+
   @IBAction func onFadeOutTapped(sender: AnyObject) {
+    fadeOut()
+  }
+
+  private func fadeIn() {
+    if let currentPlayer = player {
+      fader =  ViewController.initFader(currentPlayer, fader: fader)
+      let currentVolume = Double(currentPlayer.volume)
+      fader?.fade(fromVolume: currentVolume, toVolume: 1,
+        interval: AppDelegate.current.controls.value(ControlType.interval),
+        velocity: AppDelegate.current.controls.value(ControlType.velocity))
+    }
+  }
+
+  private func fadeOut() {
     if let currentPlayer = player {
       fader = ViewController.initFader(currentPlayer, fader: fader)
       let currentVolume = Double(currentPlayer.volume)
@@ -40,22 +60,11 @@ class ViewController: UIViewController {
     }
   }
 
-  @IBAction func onFadeInTapped(sender: AnyObject) {
-    if let currentPlayer = player {
-      fader =  ViewController.initFader(currentPlayer, fader: fader)
-      let currentVolume = Double(currentPlayer.volume)
-      fader?.fade(fromVolume: currentVolume, toVolume: 1,
-        interval: AppDelegate.current.controls.value(ControlType.interval),
-        velocity: AppDelegate.current.controls.value(ControlType.velocity))
-    }
-  }
-
   private func playSound(fileName: String) {
     let error: NSErrorPointer = nil
     let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
     let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: error)
     newPlayer.numberOfLoops = -1
-    newPlayer.volume = 0
 
     if let currentPlayer = player { return } // already playing
 

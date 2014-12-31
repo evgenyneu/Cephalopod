@@ -19,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m72-Bt-q1Z">
-                                <rect key="frame" x="183" y="532" width="97" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="199" y="538" width="81" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Fade in">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -29,8 +29,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luj-xg-b4M">
-                                <rect key="frame" x="310" y="532" width="117" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="310" y="538" width="97" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Fade out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,15 +38,15 @@
                                     <action selector="onFadeOutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUj-3b-1Ig"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-9T-D11">
-                                <rect key="frame" x="26" y="40" width="548" height="472"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-9T-D11">
+                                <rect key="frame" x="26" y="60" width="548" height="452"/>
                                 <color key="backgroundColor" red="1" green="0.98854736160000001" blue="0.45219169729999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hxc-9T-D11" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="9nL-XN-Hmf"/>
-                            <constraint firstItem="Hxc-9T-D11" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="BIo-Jh-2YL"/>
+                            <constraint firstItem="Hxc-9T-D11" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="BIo-Jh-2YL"/>
                             <constraint firstItem="m72-Bt-q1Z" firstAttribute="top" secondItem="Hxc-9T-D11" secondAttribute="bottom" constant="20" id="Ebq-4T-W1e"/>
                             <constraint firstAttribute="centerX" secondItem="m72-Bt-q1Z" secondAttribute="trailing" constant="20" id="GiA-1U-09e"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m72-Bt-q1Z" secondAttribute="bottom" constant="20" id="NyI-BK-xB2"/>
