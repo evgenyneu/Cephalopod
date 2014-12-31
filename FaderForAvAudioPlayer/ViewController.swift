@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     if let currentPlayer = player {
       fader = ViewController.initFader(currentPlayer, fader: fader)
       let currentVolume = Double(currentPlayer.volume)
-      fader?.fade(fromVolume: currentVolume, toVolume: 0, fadeIntervalSeconds: 2)
+      fader?.fade(fromVolume: currentVolume, toVolume: 0, interval: 2, velocity: 1.5)
     }
   }
 
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     if let currentPlayer = player {
       fader =  ViewController.initFader(currentPlayer, fader: fader)
       let currentVolume = Double(currentPlayer.volume)
-      fader?.fade(fromVolume: currentVolume, toVolume: 1, fadeIntervalSeconds: 2)
+      fader?.fade(fromVolume: currentVolume, toVolume: 1, interval: 2, velocity: 1.5)
     }
   }
 
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
     let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
     let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: error)
     newPlayer.numberOfLoops = -1
+    newPlayer.volume = 0
 
     if let currentPlayer = player { return } // already playing
 

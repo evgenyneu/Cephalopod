@@ -10,14 +10,14 @@ import Foundation
 import AVFoundation
 
 let iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds = 2.0
-let iiFaderForAvAudioPlayer_defaultVelocity = 5.0
+let iiFaderForAvAudioPlayer_defaultVelocity = 3.0
 
 @objc
 public class iiFaderForAvAudioPlayer {
   let player: AVAudioPlayer
   private var timer: NSTimer?
 
-  private let stepsPerSecond = 40.0 // The higher the number - the higher the quality of fade
+  private let stepsPerSecond = 100.0 // The higher the number - the higher the quality of fade
   private var fadeIntervalSeconds = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds
   private var fadeVelocity = iiFaderForAvAudioPlayer_defaultVelocity
 
@@ -34,12 +34,18 @@ public class iiFaderForAvAudioPlayer {
     stop()
   }
 
+  private var fadeIn: Bool {
+    return fromVolume < toVolume
+  }
+
   func fade(#fromVolume: Double, toVolume: Double,
-    fadeIntervalSeconds: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds) {
+    interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
+    velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity) {
 
     self.fromVolume = iiFaderForAvAudioPlayer.makeSureValueIsBetween0and1(fromVolume)
     self.toVolume = iiFaderForAvAudioPlayer.makeSureValueIsBetween0and1(toVolume)
-    self.fadeIntervalSeconds = fadeIntervalSeconds
+    self.fadeIntervalSeconds = interval
+    self.fadeVelocity = velocity
 
     player.volume = Float(self.fromVolume)
 
@@ -78,14 +84,22 @@ public class iiFaderForAvAudioPlayer {
     let currentTimeFrom0To1 = iiFaderForAvAudioPlayer.timeFrom0To1(
       currentStep, fadeIntervalSeconds: fadeIntervalSeconds, stepsPerSecond: stepsPerSecond)
 
-    var volumeMultiplier = iiFaderForAvAudioPlayer.fadeOutVolumeMultiplier(
-      currentTimeFrom0To1, velocity: fadeVelocity)
+    var volumeMultiplier: Double
 
-//    if fadeIn {
-//      volumeMultiplier = 1 - volumeMultiplier
-//    }
+    var newVolume: Double = 0
 
-    var newVolume = fromVolume + (toVolume - fromVolume) * volumeMultiplier
+    if fadeIn {
+      volumeMultiplier = iiFaderForAvAudioPlayer.fadeInVolumeMultiplier(currentTimeFrom0To1,
+        velocity: fadeVelocity)
+
+      newVolume = fromVolume + (toVolume - fromVolume) * volumeMultiplier
+
+    } else {
+      volumeMultiplier = iiFaderForAvAudioPlayer.fadeOutVolumeMultiplier(currentTimeFrom0To1,
+        velocity: fadeVelocity)
+
+      newVolume = toVolume - (toVolume - fromVolume) * volumeMultiplier
+    }
 
     println("Volume \(newVolume) mult: \(volumeMultiplier)")
 
