@@ -45,9 +45,6 @@ fader.fadeOut()
 fader.fadeIn(duration: 3, velocity: 2)
 ```
 
-Velocity of 0 creates a linear fade. Values greater than zero produce more logarithmic fading to make it sound more even to humans ear. I personally use velocity values from 2 to 5.
-
-
 ## Volume functions
 
 The following graph shows functions I am using for calculating the volume for the fade. Green one is for fade in and blue is for fade out.
@@ -62,7 +59,9 @@ The following graph shows functions I am using for calculating the volume for th
 
 <img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/audio-fade-out-formula-logarithmic.png" alt="Sound fade out logarithmic formula" width="160">
 
-Where `v` is velocity and `x` is time.
+Where `x` is time and `v` is velocity.
+
+Velocity of 0 creates a linear fade. Values greater than zero produce more logarithmic fading to make it sound more even to humans ear. I personally use velocity values from 2 to 5.
 
 Live graph demo: https://www.desmos.com/calculator/mvd9n5rrii
 
