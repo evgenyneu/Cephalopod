@@ -53,7 +53,7 @@ Larger numbers will produce finer fade effect at expense of CPU juice.
 
 ## Volume functions
 
-The following graph shows functions I am using for calculating the volume for the fade. Green one is for fade in and blue is for fade out.
+The following graph shows functions I am using for calculating the volume for the fade.
 
 <img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/ios-fader-formula-graph-logarithmic.png" alt="Sound fade logarithmic velocity function for iOS/Swift" width="457">
 
