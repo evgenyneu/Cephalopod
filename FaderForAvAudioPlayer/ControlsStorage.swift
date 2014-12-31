@@ -16,7 +16,7 @@ class ControlsStorage {
   func setup() {
     allArray.append(ControlData(
       type: ControlType.interval,
-      defaults: SliderDefaults(value: 5, minimumValue: 0.1, maximumValue: 10)
+      defaults: SliderDefaults(value: 3, minimumValue: 0.1, maximumValue: 10)
       ))
 
     allArray.append(ControlData(

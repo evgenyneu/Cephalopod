@@ -15,6 +15,7 @@ class ViewController: UIViewController {
   private var player: AVAudioPlayer?
   private var fader: iiFaderForAvAudioPlayer?
   @IBOutlet weak var sliderParentView: UIView!
+  @IBOutlet weak var fadingLabel: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,7 +24,10 @@ class ViewController: UIViewController {
     createControls()
     playSound(audioFileName)
     player?.volume = 0
-    fadeIn()
+
+    if let currentPlayer = player {
+      fadeIn(currentPlayer)
+    }
   }
 
   private func createControls() {
@@ -32,31 +36,45 @@ class ViewController: UIViewController {
   }
 
   @IBAction func onFadeInTapped(sender: AnyObject) {
-    fadeIn()
-  }
+    fadingLabel.hidden = false
 
-  @IBAction func onFadeOutTapped(sender: AnyObject) {
-    fadeOut()
-  }
-
-  private func fadeIn() {
     if let currentPlayer = player {
-      fader =  ViewController.initFader(currentPlayer, fader: fader)
-      let currentVolume = Double(currentPlayer.volume)
-      fader?.fade(fromVolume: currentVolume, toVolume: 1,
-        interval: AppDelegate.current.controls.value(ControlType.interval),
-        velocity: AppDelegate.current.controls.value(ControlType.velocity))
+      fadeIn(currentPlayer)
     }
   }
 
-  private func fadeOut() {
-    if let currentPlayer = player {
-      fader = ViewController.initFader(currentPlayer, fader: fader)
-      let currentVolume = Double(currentPlayer.volume)
+  @IBAction func onFadeOutTapped(sender: AnyObject) {
+    fadingLabel.hidden = false
 
-      fader?.fade(fromVolume: currentVolume, toVolume: 0,
-        interval: AppDelegate.current.controls.value(ControlType.interval),
-        velocity: AppDelegate.current.controls.value(ControlType.velocity))
+    if let currentPlayer = player {
+      fadeOut(currentPlayer)
+    }
+  }
+
+  private func fadeIn(aPlayer: AVAudioPlayer) {
+    fader =  ViewController.initFader(aPlayer, fader: fader)
+    let currentVolume = Double(aPlayer.volume)
+    fader?.fade(fromVolume: currentVolume, toVolume: 1,
+      interval: AppDelegate.current.controls.value(ControlType.interval),
+      velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
+
+      if finished {
+        self.fadingLabel.hidden = true
+      }
+    }
+  }
+
+  private func fadeOut(aPlayer: AVAudioPlayer) {
+    fader = ViewController.initFader(aPlayer, fader: fader)
+    let currentVolume = Double(aPlayer.volume)
+
+    fader?.fade(fromVolume: currentVolume, toVolume: 0,
+      interval: AppDelegate.current.controls.value(ControlType.interval),
+      velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
+
+      if finished {
+        self.fadingLabel.hidden = true
+      }
     }
   }
 

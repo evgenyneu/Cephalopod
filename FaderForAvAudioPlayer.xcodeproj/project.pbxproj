@@ -14,7 +14,6 @@
 		2B0BCD621A539C990082D3C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BCD601A539C990082D3C5 /* LaunchScreen.xib */; };
 		2B0BCD791A539D090082D3C5 /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD781A539D090082D3C5 /* iiFaderForAvAudioPlayer.swift */; };
 		2B0BCD7B1A539D440082D3C5 /* iiFaderForAvAudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD7A1A539D440082D3C5 /* iiFaderForAvAudioPlayerTests.swift */; };
-		2B0BCD7D1A539D860082D3C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BCD7C1A539D860082D3C5 /* Default-568h@2x.png */; };
 		2B0BCD8B1A53C3960082D3C5 /* ControlsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD841A53C3960082D3C5 /* ControlsData.swift */; };
 		2B0BCD8C1A53C3960082D3C5 /* ControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD851A53C3960082D3C5 /* ControlType.swift */; };
 		2B0BCD8D1A53C3960082D3C5 /* SliderControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD861A53C3960082D3C5 /* SliderControls.swift */; };
@@ -25,6 +24,7 @@
 		2B0BCD931A53C3A50082D3C5 /* ControlsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD921A53C3A50082D3C5 /* ControlsStorage.swift */; };
 		2B0BCD961A53C5850082D3C5 /* iiLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD951A53C5850082D3C5 /* iiLayout.swift */; };
 		2B0BCD9A1A53D7670082D3C5 /* i_ll_be_waiting_carlos_vallejo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BCD991A53D7670082D3C5 /* i_ll_be_waiting_carlos_vallejo.mp3 */; };
+		2B3E24A11A53DFD9002FDAB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B3E24A01A53DFD9002FDAB2 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		2B0BCD6C1A539C990082D3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B0BCD781A539D090082D3C5 /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
 		2B0BCD7A1A539D440082D3C5 /* iiFaderForAvAudioPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayerTests.swift; sourceTree = "<group>"; };
-		2B0BCD7C1A539D860082D3C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2B0BCD841A53C3960082D3C5 /* ControlsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsData.swift; sourceTree = "<group>"; };
 		2B0BCD851A53C3960082D3C5 /* ControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlType.swift; sourceTree = "<group>"; };
 		2B0BCD861A53C3960082D3C5 /* SliderControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControls.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		2B0BCD921A53C3A50082D3C5 /* ControlsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsStorage.swift; sourceTree = "<group>"; };
 		2B0BCD951A53C5850082D3C5 /* iiLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiLayout.swift; sourceTree = "<group>"; };
 		2B0BCD991A53D7670082D3C5 /* i_ll_be_waiting_carlos_vallejo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i_ll_be_waiting_carlos_vallejo.mp3; sourceTree = "<group>"; };
+		2B3E24A01A53DFD9002FDAB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		2B0BCD491A539C990082D3C5 = {
 			isa = PBXGroup;
 			children = (
-				2B0BCD7C1A539D860082D3C5 /* Default-568h@2x.png */,
+				2B3E24A01A53DFD9002FDAB2 /* Default-568h@2x.png */,
 				2B0BCD541A539C990082D3C5 /* FaderForAvAudioPlayer */,
 				2B0BCD6A1A539C990082D3C5 /* FaderForAvAudioPlayerTests */,
 				2B0BCD531A539C990082D3C5 /* Products */,
@@ -271,6 +271,7 @@
 				2B0BCD5D1A539C990082D3C5 /* Main.storyboard in Resources */,
 				2B0BCD621A539C990082D3C5 /* LaunchScreen.xib in Resources */,
 				2B0BCD5F1A539C990082D3C5 /* Images.xcassets in Resources */,
+				2B3E24A11A53DFD9002FDAB2 /* Default-568h@2x.png in Resources */,
 				2B0BCD9A1A53D7670082D3C5 /* i_ll_be_waiting_carlos_vallejo.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B0BCD7D1A539D860082D3C5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FaderForAvAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -437,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FaderForAvAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -495,6 +497,7 @@
 				2B0BCD731A539C990082D3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B0BCD741A539C990082D3C5 /* Build configuration list for PBXNativeTarget "FaderForAvAudioPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +506,7 @@
 				2B0BCD761A539C990082D3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

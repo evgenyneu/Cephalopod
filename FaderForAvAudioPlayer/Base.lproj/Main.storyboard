@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -38,24 +38,33 @@
                                     <action selector="onFadeOutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUj-3b-1Ig"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-9T-D11">
-                                <rect key="frame" x="26" y="60" width="548" height="452"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-9T-D11">
+                                <rect key="frame" x="26" y="60" width="548" height="411.5"/>
                                 <color key="backgroundColor" red="1" green="0.98854736160000001" blue="0.45219169729999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjx-Kg-Xaz">
+                                <rect key="frame" x="268.5" y="509" width="62.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="m72-Bt-q1Z" firstAttribute="top" secondItem="xjx-Kg-Xaz" secondAttribute="bottom" constant="8" id="2F7-53-t7i"/>
                             <constraint firstItem="Hxc-9T-D11" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="9nL-XN-Hmf"/>
                             <constraint firstItem="Hxc-9T-D11" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="BIo-Jh-2YL"/>
-                            <constraint firstItem="m72-Bt-q1Z" firstAttribute="top" secondItem="Hxc-9T-D11" secondAttribute="bottom" constant="20" id="Ebq-4T-W1e"/>
                             <constraint firstAttribute="centerX" secondItem="m72-Bt-q1Z" secondAttribute="trailing" constant="20" id="GiA-1U-09e"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m72-Bt-q1Z" secondAttribute="bottom" constant="20" id="NyI-BK-xB2"/>
                             <constraint firstItem="Luj-xg-b4M" firstAttribute="centerY" secondItem="m72-Bt-q1Z" secondAttribute="centerY" id="ZKW-PM-4WL"/>
+                            <constraint firstItem="xjx-Kg-Xaz" firstAttribute="top" secondItem="Hxc-9T-D11" secondAttribute="bottom" constant="38" id="hQf-MT-X5H"/>
+                            <constraint firstAttribute="centerX" secondItem="xjx-Kg-Xaz" secondAttribute="centerX" id="pPS-qW-SDc"/>
                             <constraint firstItem="Luj-xg-b4M" firstAttribute="leading" secondItem="m72-Bt-q1Z" secondAttribute="trailing" constant="30" id="uMV-KM-ajh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hxc-9T-D11" secondAttribute="trailing" constant="10" id="yRM-fD-VOM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fadingLabel" destination="xjx-Kg-Xaz" id="Fjg-XO-3sE"/>
                         <outlet property="sliderParentView" destination="Hxc-9T-D11" id="XSw-eW-u1Y"/>
                     </connections>
                 </viewController>

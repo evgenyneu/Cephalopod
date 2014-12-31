@@ -1,6 +1,6 @@
 # Sound fader code for AvAudioPlayer iOS/Swift
 
-
+https://www.desmos.com/calculator/mvd9n5rrii
 
 ## Attribution
 

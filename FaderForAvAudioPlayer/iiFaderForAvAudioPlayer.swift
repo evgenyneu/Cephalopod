@@ -17,7 +17,10 @@ public class iiFaderForAvAudioPlayer {
   let player: AVAudioPlayer
   private var timer: NSTimer?
 
-  private let stepsPerSecond = 30.0 // The higher the number - the higher the quality of fade
+  // The higher the number - the higher the quality of fade
+  // and it will consume more CPU.
+  private let stepsPerSecond = 30.0
+
   private var fadeIntervalSeconds = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds
   private var fadeVelocity = iiFaderForAvAudioPlayer_defaultVelocity
 
@@ -25,6 +28,8 @@ public class iiFaderForAvAudioPlayer {
   private var toVolume = 0.0
 
   private var currentStep = 0
+
+  private var onFinished: ((Bool)->())? = nil
 
   init(player: AVAudioPlayer) {
     self.player = player
@@ -40,12 +45,15 @@ public class iiFaderForAvAudioPlayer {
 
   func fade(#fromVolume: Double, toVolume: Double,
     interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
-    velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity) {
+    velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
 
     self.fromVolume = iiFaderForAvAudioPlayer.makeSureValueIsBetween0and1(fromVolume)
     self.toVolume = iiFaderForAvAudioPlayer.makeSureValueIsBetween0and1(toVolume)
     self.fadeIntervalSeconds = interval
     self.fadeVelocity = velocity
+
+    callOnFinished(false)
+    self.onFinished = onFinished
 
     player.volume = Float(self.fromVolume)
 
@@ -57,6 +65,11 @@ public class iiFaderForAvAudioPlayer {
   // Stop fading. Does not stop the sound.
   func stop() {
     stopTimer()
+  }
+
+  private func callOnFinished(finished: Bool) {
+    onFinished?(finished)
+    onFinished = nil
   }
 
   private func startTimer() {
@@ -78,6 +91,7 @@ public class iiFaderForAvAudioPlayer {
     if shouldStopTimer {
       player.volume = Float(toVolume)
       stopTimer()
+      callOnFinished(true)
       return
     }
 

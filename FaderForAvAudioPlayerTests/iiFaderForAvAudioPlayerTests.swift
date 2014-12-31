@@ -34,6 +34,10 @@ class iiFaderForAvAudioPlayerTests: XCTestCase {
     XCTAssertEqual(0.000, rounded(klass.fadeOutVolumeMultiplier(123,  velocity: 2)))
   }
 
+  func testTimeValueNormalized_withDifferentVelocity() {
+    XCTAssertEqual(0.003, rounded(klass.fadeOutVolumeMultiplier(0.5, velocity: 10)))
+  }
+
   // Fade IN
   // -------------------
 
@@ -52,10 +56,6 @@ class iiFaderForAvAudioPlayerTests: XCTestCase {
     //edge cases
     XCTAssertEqual(0.000, rounded(klass.fadeInVolumeMultiplier(-12,  velocity: 2)))
     XCTAssertEqual(1.000, rounded(klass.fadeInVolumeMultiplier(123,  velocity: 2)))
-  }
-
-  func testTimeValueNormalized_withDifferentVelocity() {
-    XCTAssertEqual(0.007, rounded(klass.fadeOutVolumeMultiplier(0.5, velocity: 10)))
   }
 
   // timeFrom0To1
