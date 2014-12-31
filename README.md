@@ -1,6 +1,6 @@
 # iOS sound fader for AvAudioPlayer written in Swift
 
-This is an iOS utility class that allows to fade sounds in and out with `AvAudioPlayer`. It allows to control duration and velocity of the fade. Velocity can vary from linear to logarithmic.
+This is an iOS utility class that allows to fade sounds in and out with `AvAudioPlayer`. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
 
 ## Installation
 
