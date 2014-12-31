@@ -62,6 +62,8 @@ The following graph shows functions I am using for calculating the volume for th
 
 <img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/audio-fade-out-formula-logarithmic.png" alt="Sound fade out logarithmic formula" width="160">
 
+Where `v` is velocity and `x` is time.
+
 Live graph demo: https://www.desmos.com/calculator/mvd9n5rrii
 
 ## Demo app
