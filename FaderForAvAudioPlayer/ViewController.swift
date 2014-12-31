@@ -28,6 +28,17 @@ class ViewController: UIViewController {
     if let currentPlayer = player {
       fadeIn(currentPlayer)
     }
+
+    UILabel.appearance().textColor = UIColor.whiteColor()
+    UIView.appearance().tintColor = UIColor(
+      red: 255.0/255,
+      green: 134.0/255,
+      blue: 170.0/255,
+      alpha: 1)
+  }
+
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
   }
 
   private func createControls() {
