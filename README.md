@@ -67,7 +67,7 @@ The following graph shows how sound volume changes during the fade.
 
 Where `x` is time and `v` is velocity.
 
-Velocity of 0 creates a linear fade. Values greater than zero produce more logarithmic fade affect. Logarithmic function makes the volume increase sound more gradual to a human ear. I personally use velocity values from 2 to 5.
+Velocity of 0 creates a linear fade. Values greater than zero produce more logarithmic fade affect. Logarithmic fade sounds more gradual to a human ear. I personally use velocity values from 2 to 5.
 
 Live graph demo: https://www.desmos.com/calculator/wnstesdf0h
 
