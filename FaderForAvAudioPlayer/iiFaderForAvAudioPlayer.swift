@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-let iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds = 3.0
+let iiFaderForAvAudioPlayer_defaultFadeDurationSeconds = 3.0
 let iiFaderForAvAudioPlayer_defaultVelocity = 2.0
 
 @objc
@@ -21,7 +21,7 @@ public class iiFaderForAvAudioPlayer {
   // and it will consume more CPU.
   var stepsPerSecond = 30.0
 
-  private var fadeIntervalSeconds = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds
+  private var fadeDurationSeconds = iiFaderForAvAudioPlayer_defaultFadeDurationSeconds
   private var fadeVelocity = iiFaderForAvAudioPlayer_defaultVelocity
 
   private var fromVolume = 0.0
@@ -44,29 +44,29 @@ public class iiFaderForAvAudioPlayer {
     return fromVolume < toVolume
   }
 
-  func fadeIn(interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
+  func fadeIn(duration: Double = iiFaderForAvAudioPlayer_defaultFadeDurationSeconds,
     velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
 
     fade(
       fromVolume: Double(player.volume), toVolume: 1,
-      interval: interval, velocity: velocity, onFinished: onFinished)
+      duration: duration, velocity: velocity, onFinished: onFinished)
   }
 
-  func fadeOut(interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
+  func fadeOut(duration: Double = iiFaderForAvAudioPlayer_defaultFadeDurationSeconds,
     velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
 
     fade(
       fromVolume: Double(player.volume), toVolume: 0,
-      interval: interval, velocity: velocity, onFinished: onFinished)
+      duration: duration, velocity: velocity, onFinished: onFinished)
   }
 
   func fade(#fromVolume: Double, toVolume: Double,
-    interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
+    duration: Double = iiFaderForAvAudioPlayer_defaultFadeDurationSeconds,
     velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
 
     self.fromVolume = iiFaderForAvAudioPlayer.makeSureValueIsBetween0and1(fromVolume)
     self.toVolume = iiFaderForAvAudioPlayer.makeSureValueIsBetween0and1(toVolume)
-    self.fadeIntervalSeconds = interval
+    self.fadeDurationSeconds = duration
     self.fadeVelocity = velocity
 
     callOnFinished(false)
@@ -116,7 +116,7 @@ public class iiFaderForAvAudioPlayer {
     }
 
     let currentTimeFrom0To1 = iiFaderForAvAudioPlayer.timeFrom0To1(
-      currentStep, fadeIntervalSeconds: fadeIntervalSeconds, stepsPerSecond: stepsPerSecond)
+      currentStep, fadeDurationSeconds: fadeDurationSeconds, stepsPerSecond: stepsPerSecond)
 
     var volumeMultiplier: Double
 
@@ -141,14 +141,14 @@ public class iiFaderForAvAudioPlayer {
   }
 
   var shouldStopTimer: Bool {
-    let totalSteps = fadeIntervalSeconds * stepsPerSecond
+    let totalSteps = fadeDurationSeconds * stepsPerSecond
     return Double(currentStep) > totalSteps
   }
 
-  public class func timeFrom0To1(currentStep: Int, fadeIntervalSeconds: Double,
+  public class func timeFrom0To1(currentStep: Int, fadeDurationSeconds: Double,
     stepsPerSecond: Double) -> Double {
 
-    let totalSteps = fadeIntervalSeconds * stepsPerSecond
+    let totalSteps = fadeDurationSeconds * stepsPerSecond
     var result = Double(currentStep) / totalSteps
 
     result = makeSureValueIsBetween0and1(result)

@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     fader =  ViewController.initFader(aPlayer, fader: fader)
     let currentVolume = Double(aPlayer.volume)
     fader?.fadeIn(
-      interval: AppDelegate.current.controls.value(ControlType.interval),
+      duration: AppDelegate.current.controls.value(ControlType.duration),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
       if finished {
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     let currentVolume = Double(aPlayer.volume)
 
     fader?.fadeOut(
-      interval: AppDelegate.current.controls.value(ControlType.interval),
+      duration: AppDelegate.current.controls.value(ControlType.duration),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
       if finished {

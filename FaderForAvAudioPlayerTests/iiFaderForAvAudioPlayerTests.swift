@@ -63,40 +63,40 @@ class iiFaderForAvAudioPlayerTests: XCTestCase {
 
   func testTimeValue() {
     // 0%
-    var result = klass.timeFrom0To1(0, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    var result = klass.timeFrom0To1(0, fadeDurationSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(0.0, rounded(result))
 
     // 10%
-    result = klass.timeFrom0To1(1, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(1, fadeDurationSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(0.1, rounded(result))
 
-    result = klass.timeFrom0To1(2, fadeIntervalSeconds: 2, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(2, fadeDurationSeconds: 2, stepsPerSecond: 10)
     XCTAssertEqual(0.1, rounded(result))
 
-    result = klass.timeFrom0To1(4, fadeIntervalSeconds: 2, stepsPerSecond: 20)
+    result = klass.timeFrom0To1(4, fadeDurationSeconds: 2, stepsPerSecond: 20)
     XCTAssertEqual(0.1, rounded(result))
 
     // 50%
-    result = klass.timeFrom0To1(5, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(5, fadeDurationSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(0.5, rounded(result))
 
     // 100%
-    result = klass.timeFrom0To1(10, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(10, fadeDurationSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(1.0, rounded(result))
 
     // Edge cases
     // -----------------
 
-    result = klass.timeFrom0To1(-10, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(-10, fadeDurationSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(0.0, rounded(result))
 
-    result = klass.timeFrom0To1(100, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(100, fadeDurationSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(1.0, rounded(result))
 
-    result = klass.timeFrom0To1(1, fadeIntervalSeconds: 0, stepsPerSecond: 10)
+    result = klass.timeFrom0To1(1, fadeDurationSeconds: 0, stepsPerSecond: 10)
     XCTAssertEqual(1.0, rounded(result))
 
-    result = klass.timeFrom0To1(1, fadeIntervalSeconds: 1, stepsPerSecond: 0)
+    result = klass.timeFrom0To1(1, fadeDurationSeconds: 1, stepsPerSecond: 0)
     XCTAssertEqual(1.0, rounded(result))
   }
 
