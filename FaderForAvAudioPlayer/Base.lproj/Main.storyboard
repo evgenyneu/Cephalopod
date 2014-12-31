@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,21 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m72-Bt-q1Z">
-                                <rect key="frame" x="272" y="276" width="56" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luj-xg-b4M">
+                                <rect key="frame" x="315" y="276" width="117" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Play">
+                                <state key="normal" title="Fade out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onPlayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPF-jh-6kn"/>
+                                    <action selector="onFadeOutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUj-3b-1Ig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m72-Bt-q1Z">
+                                <rect key="frame" x="188" y="276" width="97" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Fade in">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFadeInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qay-HG-k0l"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="m72-Bt-q1Z" secondAttribute="trailing" constant="15" id="GiA-1U-09e"/>
                             <constraint firstAttribute="centerY" secondItem="m72-Bt-q1Z" secondAttribute="centerY" id="J2b-zT-701"/>
-                            <constraint firstAttribute="centerX" secondItem="m72-Bt-q1Z" secondAttribute="centerX" id="jlp-AN-icq"/>
+                            <constraint firstAttribute="centerY" secondItem="Luj-xg-b4M" secondAttribute="centerY" id="kIf-d6-NS9"/>
+                            <constraint firstItem="Luj-xg-b4M" firstAttribute="leading" secondItem="m72-Bt-q1Z" secondAttribute="trailing" constant="30" id="uMV-KM-ajh"/>
                         </constraints>
                     </view>
                 </viewController>

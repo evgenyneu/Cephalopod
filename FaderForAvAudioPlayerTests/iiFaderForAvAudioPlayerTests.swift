@@ -14,27 +14,51 @@ class iiFaderForAvAudioPlayerTests: XCTestCase {
 
   let klass = iiFaderForAvAudioPlayer.self
 
-  // volumeMultiplier
+  // Fade OUT
   // -------------------
 
-  func testTimeValueNormalized() {
-    XCTAssertEqual(1.000, rounded(klass.volumeMultiplier(0,   velocity: 5)))
-    XCTAssertEqual(0.607, rounded(klass.volumeMultiplier(0.1, velocity: 5)))
-    XCTAssertEqual(0.082, rounded(klass.volumeMultiplier(0.5, velocity: 5)))
-    XCTAssertEqual(0.018, rounded(klass.volumeMultiplier(0.8, velocity: 5)))
-    XCTAssertEqual(0.011, rounded(klass.volumeMultiplier(0.9, velocity: 5)))
-    XCTAssertEqual(0.007, rounded(klass.volumeMultiplier(1,   velocity: 5)))
+  func testFadeOutVolumeMultiplier() {
+    XCTAssertEqual(1.000, rounded(klass.fadeOutVolumeMultiplier(0,   velocity: 2)))
+    XCTAssertEqual(0.737, rounded(klass.fadeOutVolumeMultiplier(0.1, velocity: 2)))
+    XCTAssertEqual(0.184, rounded(klass.fadeOutVolumeMultiplier(0.5, velocity: 2)))
+    XCTAssertEqual(0.040, rounded(klass.fadeOutVolumeMultiplier(0.8, velocity: 2)))
+    XCTAssertEqual(0.017, rounded(klass.fadeOutVolumeMultiplier(0.9, velocity: 2)))
+    XCTAssertEqual(0.000, rounded(klass.fadeOutVolumeMultiplier(1,   velocity: 2)))
+
+    // linear
+    XCTAssertEqual(0.500, rounded(klass.fadeOutVolumeMultiplier(0.5, velocity: 0)))
+    XCTAssertEqual(0.300, rounded(klass.fadeOutVolumeMultiplier(0.7, velocity: 0)))
 
     //edge cases
-    XCTAssertEqual(1.000, rounded(klass.volumeMultiplier(-12,   velocity: 5)))
-    XCTAssertEqual(0.007, rounded(klass.volumeMultiplier(123,   velocity: 5)))
+    XCTAssertEqual(1.000, rounded(klass.fadeOutVolumeMultiplier(-12,  velocity: 2)))
+    XCTAssertEqual(0.000, rounded(klass.fadeOutVolumeMultiplier(123,  velocity: 2)))
+  }
+
+  // Fade IN
+  // -------------------
+
+  func testFadeInVolumeMultiplier() {
+    XCTAssertEqual(0.000, rounded(klass.fadeInVolumeMultiplier(0,   velocity: 2)))
+    XCTAssertEqual(0.017, rounded(klass.fadeInVolumeMultiplier(0.1, velocity: 2)))
+    XCTAssertEqual(0.184, rounded(klass.fadeInVolumeMultiplier(0.5, velocity: 2)))
+    XCTAssertEqual(0.536, rounded(klass.fadeInVolumeMultiplier(0.8, velocity: 2)))
+    XCTAssertEqual(0.737, rounded(klass.fadeInVolumeMultiplier(0.9, velocity: 2)))
+    XCTAssertEqual(1.000, rounded(klass.fadeInVolumeMultiplier(1,   velocity: 2)))
+
+    // linear
+    XCTAssertEqual(0.500, rounded(klass.fadeInVolumeMultiplier(0.5, velocity: 0)))
+    XCTAssertEqual(0.700, rounded(klass.fadeInVolumeMultiplier(0.7, velocity: 0)))
+
+    //edge cases
+    XCTAssertEqual(0.000, rounded(klass.fadeInVolumeMultiplier(-12,  velocity: 2)))
+    XCTAssertEqual(1.000, rounded(klass.fadeInVolumeMultiplier(123,  velocity: 2)))
   }
 
   func testTimeValueNormalized_withDifferentVelocity() {
-    XCTAssertEqual(0.007, rounded(klass.volumeMultiplier(0.5, velocity: 10)))
+    XCTAssertEqual(0.007, rounded(klass.fadeOutVolumeMultiplier(0.5, velocity: 10)))
   }
 
-  // volumeMultiplier
+  // timeFrom0To1
   // -------------------
 
   func testTimeValue() {

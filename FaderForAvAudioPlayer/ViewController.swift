@@ -17,7 +17,8 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    playSound(audioFileName)
   }
 
   override func didReceiveMemoryWarning() {
@@ -26,28 +27,42 @@ class ViewController: UIViewController {
   }
 
 
-  @IBAction func onPlayTapped(sender: AnyObject) {
-    playSound(audioFileName)
+  @IBAction func onFadeOutTapped(sender: AnyObject) {
+    if let currentPlayer = player {
+      fader = ViewController.initFader(currentPlayer, fader: fader)
+      let currentVolume = Double(currentPlayer.volume)
+      fader?.fade(fromVolume: currentVolume, toVolume: 0, fadeIntervalSeconds: 2)
+    }
+  }
+
+  @IBAction func onFadeInTapped(sender: AnyObject) {
+    if let currentPlayer = player {
+      fader =  ViewController.initFader(currentPlayer, fader: fader)
+      let currentVolume = Double(currentPlayer.volume)
+      fader?.fade(fromVolume: currentVolume, toVolume: 1, fadeIntervalSeconds: 2)
+    }
   }
 
   private func playSound(fileName: String) {
     let error: NSErrorPointer = nil
     let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
     let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: error)
+    newPlayer.numberOfLoops = -1
 
-    if let currentPlayer = player {
-      currentPlayer.stop()
-    }
+    if let currentPlayer = player { return } // already playing
 
     player = newPlayer
     newPlayer.play()
+  }
+
+  private class func initFader(player: AVAudioPlayer, fader: iiFaderForAvAudioPlayer?)
+    -> iiFaderForAvAudioPlayer {
 
     if let currentFader = fader {
       currentFader.stop()
     }
 
-    fader = iiFaderForAvAudioPlayer(player: newPlayer)
-    fader?.fadeOut(fadeIntervalSeconds: 2)
+    return iiFaderForAvAudioPlayer(player: player)
   }
 }
 
