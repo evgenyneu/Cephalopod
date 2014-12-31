@@ -4,7 +4,49 @@ This is an iOS utility class that allows to fade in/out sound when playing sound
 
 ## Installation
 
+Copy [iiFaderForAvAudioPlayer.swift](https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/FaderForAvAudioPlayer/iiFaderForAvAudioPlayer.swift) file to your project.
 
+## Usage
+
+### Play an audio file
+
+```Swift
+import AVFoundation
+
+let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "my_lovely_horse.mp3", nil, nil)
+let player = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+player.play()
+player.volume = 0
+```
+
+### Instantiate a fader
+
+```Swift
+let fader = iiFaderForAvAudioPlayer(player: player)
+```
+
+I would create a property somewhere in my app to keep a strong reference to the fader.
+
+### Fade in
+
+```Swift
+fader.fadeIn()
+```
+
+### Fade out
+
+```Swift
+fader.fadeOut()
+```
+
+### Set fade duration and velocity
+
+```Swift
+fader.fadeIn()
+```
+
+
+### Graph
 
 https://www.desmos.com/calculator/mvd9n5rrii
 
