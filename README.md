@@ -23,26 +23,24 @@ player.volume = 0
 
 ```Swift
 let fader = iiFaderForAvAudioPlayer(player: player)
-```
-
-I would create a property somewhere in my app to keep a strong reference to the fader.
-
-### Fade in
-
-```Swift
+fader.fadeIn()
 fader.fadeIn()
 ```
 
-### Fade out
-
-```Swift
-fader.fadeOut()
-```
+I would create a fader property somewhere in my app and keep a strong reference to the fader.
 
 ### Set fade duration and velocity
 
 ```Swift
 fader.fadeIn(duration: 3, velocity: 2)
+```
+
+### Supply fade start/end volume and a completion callabck
+
+```Swift
+fader.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished in
+  // fading finished
+}
 ```
 
 ## Volume functions
