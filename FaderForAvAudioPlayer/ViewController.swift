@@ -48,6 +48,7 @@ class ViewController: UIViewController {
 
   @IBAction func onFadeInTapped(sender: AnyObject) {
     fadingLabel.hidden = false
+    fadingLabel.text = "Fading in..."
 
     if let currentPlayer = player {
       fadeIn(currentPlayer)
@@ -56,6 +57,7 @@ class ViewController: UIViewController {
 
   @IBAction func onFadeOutTapped(sender: AnyObject) {
     fadingLabel.hidden = false
+    fadingLabel.text = "Fading out..."
 
     if let currentPlayer = player {
       fadeOut(currentPlayer)
@@ -65,7 +67,7 @@ class ViewController: UIViewController {
   private func fadeIn(aPlayer: AVAudioPlayer) {
     fader =  ViewController.initFader(aPlayer, fader: fader)
     let currentVolume = Double(aPlayer.volume)
-    fader?.fade(fromVolume: currentVolume, toVolume: 1,
+    fader?.fadeIn(
       interval: AppDelegate.current.controls.value(ControlType.interval),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
@@ -79,7 +81,7 @@ class ViewController: UIViewController {
     fader = ViewController.initFader(aPlayer, fader: fader)
     let currentVolume = Double(aPlayer.volume)
 
-    fader?.fade(fromVolume: currentVolume, toVolume: 0,
+    fader?.fadeOut(
       interval: AppDelegate.current.controls.value(ControlType.interval),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 

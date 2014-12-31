@@ -9,8 +9,8 @@
 import Foundation
 import AVFoundation
 
-let iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds = 2.0
-let iiFaderForAvAudioPlayer_defaultVelocity = 3.0
+let iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds = 3.0
+let iiFaderForAvAudioPlayer_defaultVelocity = 2.0
 
 @objc
 public class iiFaderForAvAudioPlayer {
@@ -19,7 +19,7 @@ public class iiFaderForAvAudioPlayer {
 
   // The higher the number - the higher the quality of fade
   // and it will consume more CPU.
-  private let stepsPerSecond = 30.0
+  var stepsPerSecond = 30.0
 
   private var fadeIntervalSeconds = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds
   private var fadeVelocity = iiFaderForAvAudioPlayer_defaultVelocity
@@ -36,11 +36,28 @@ public class iiFaderForAvAudioPlayer {
   }
 
   deinit {
+    callOnFinished(false)
     stop()
   }
 
   private var fadeIn: Bool {
     return fromVolume < toVolume
+  }
+
+  func fadeIn(interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
+    velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
+
+    fade(
+      fromVolume: Double(player.volume), toVolume: 1,
+      interval: interval, velocity: velocity, onFinished: onFinished)
+  }
+
+  func fadeOut(interval: Double = iiFaderForAvAudioPlayer_defaultFadeIntervalSeconds,
+    velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
+
+    fade(
+      fromVolume: Double(player.volume), toVolume: 0,
+      interval: interval, velocity: velocity, onFinished: onFinished)
   }
 
   func fade(#fromVolume: Double, toVolume: Double,
@@ -57,7 +74,10 @@ public class iiFaderForAvAudioPlayer {
 
     player.volume = Float(self.fromVolume)
 
-    if self.fromVolume == self.toVolume { return }
+    if self.fromVolume == self.toVolume {
+      callOnFinished(true)
+      return
+    }
 
     startTimer()
   }
