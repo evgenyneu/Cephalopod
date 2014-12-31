@@ -92,9 +92,8 @@ class ViewController: UIViewController {
   }
 
   private func playSound(fileName: String) {
-    let error: NSErrorPointer = nil
-    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
-    let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: error)
+    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName, nil, nil)
+    let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
     newPlayer.numberOfLoops = -1
 
     if let currentPlayer = player { return } // already playing

@@ -1,4 +1,4 @@
-# Sound fader code for AvAudioPlayer iOS/Swift
+# iOS sound fader for AvAudioPlayer written in Swift
 
 https://www.desmos.com/calculator/mvd9n5rrii
 
