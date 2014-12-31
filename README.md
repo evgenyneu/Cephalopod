@@ -48,8 +48,9 @@ fader.fadeIn(duration: 3, velocity: 2)
 Velocity of 0 creates a linear fade. Values greater than zero produce more logarithmic fading to make it sound more even to humans ear. I personally use velocity values from 2 to 5.
 
 
-### Velocity function
+## Volume functions
 
+The following graph shows functions I am using for calculating the volume for the fade. Green one is for fade in and blue is for fade out.
 
 <img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/ios-fader-formula-graph-logarithmic.png" alt="Sound fade logarithmic velocity function for iOS/Swift" width="457">
 
