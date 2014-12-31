@@ -24,7 +24,7 @@ player.volume = 0
 ```Swift
 let fader = iiFaderForAvAudioPlayer(player: player)
 fader.fadeIn()
-fader.fadeIn()
+fader.fadeOut()
 ```
 
 I would create a fader property somewhere in my app and keep a strong reference to the fader.
