@@ -54,6 +54,14 @@ The following graph shows functions I am using for calculating the volume for th
 
 <img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/ios-fader-formula-graph-logarithmic.png" alt="Sound fade logarithmic velocity function for iOS/Swift" width="457">
 
+### Fade in formula
+
+<img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/audio-fade-in-formula-logarithmic.png" alt="Sound fade in logarithmic formula">
+
+### Fade out formula
+
+<img src="https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/graphics/audio-fade-out-formula-logarithmic.png" alt="Sound fade out logarithmic formula">
+
 Live graph demo: https://www.desmos.com/calculator/mvd9n5rrii
 
 ## Demo app
