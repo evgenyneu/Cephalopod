@@ -79,3 +79,7 @@ Live graph demo: https://www.desmos.com/calculator/wnstesdf0h
 
 The lovely music was recorded by Carlos Vallejo and downloaded from
 http://www.flashkit.com/loops/Easy_Listening/Ill_Be_-Carlos_V-10012/index.php
+
+## Project Home
+
+https://github.com/evgenyneu/sound-fader-ios
