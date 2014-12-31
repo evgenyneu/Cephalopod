@@ -14,24 +14,29 @@ private let audioFileName = "weather_alert_sound_bible.mp3"
 class ViewController: UIViewController {
   private var player: AVAudioPlayer?
   private var fader: iiFaderForAvAudioPlayer?
+  @IBOutlet weak var sliderParentView: UIView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    sliderParentView.backgroundColor = nil
+    createControls()
     playSound(audioFileName)
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  private func createControls() {
+    SliderControls.create(AppDelegate.current.controls.allArray,
+      delegate: nil, superview: sliderParentView)
   }
-
 
   @IBAction func onFadeOutTapped(sender: AnyObject) {
     if let currentPlayer = player {
       fader = ViewController.initFader(currentPlayer, fader: fader)
       let currentVolume = Double(currentPlayer.volume)
-      fader?.fade(fromVolume: currentVolume, toVolume: 0, interval: 2, velocity: 1.5)
+
+      fader?.fade(fromVolume: currentVolume, toVolume: 0,
+        interval: AppDelegate.current.controls.value(ControlType.interval),
+        velocity: AppDelegate.current.controls.value(ControlType.velocity))
     }
   }
 
@@ -39,7 +44,9 @@ class ViewController: UIViewController {
     if let currentPlayer = player {
       fader =  ViewController.initFader(currentPlayer, fader: fader)
       let currentVolume = Double(currentPlayer.volume)
-      fader?.fade(fromVolume: currentVolume, toVolume: 1, interval: 2, velocity: 1.5)
+      fader?.fade(fromVolume: currentVolume, toVolume: 1,
+        interval: AppDelegate.current.controls.value(ControlType.interval),
+        velocity: AppDelegate.current.controls.value(ControlType.velocity))
     }
   }
 

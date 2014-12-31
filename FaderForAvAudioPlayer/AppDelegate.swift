@@ -10,9 +10,13 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  let controls = ControlsStorage()
   var window: UIWindow?
 
+  override init() {
+    super.init()
+    controls.setup()
+  }
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
@@ -41,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
-
+  class var current: AppDelegate {
+    return UIApplication.sharedApplication().delegate as AppDelegate
+  }
 }
 

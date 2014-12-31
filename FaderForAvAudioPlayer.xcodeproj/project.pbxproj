@@ -16,6 +16,15 @@
 		2B0BCD7B1A539D440082D3C5 /* iiFaderForAvAudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD7A1A539D440082D3C5 /* iiFaderForAvAudioPlayerTests.swift */; };
 		2B0BCD7D1A539D860082D3C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BCD7C1A539D860082D3C5 /* Default-568h@2x.png */; };
 		2B0BCD801A539F8C0082D3C5 /* weather_alert_sound_bible.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BCD7F1A539F8C0082D3C5 /* weather_alert_sound_bible.mp3 */; };
+		2B0BCD8B1A53C3960082D3C5 /* ControlsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD841A53C3960082D3C5 /* ControlsData.swift */; };
+		2B0BCD8C1A53C3960082D3C5 /* ControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD851A53C3960082D3C5 /* ControlType.swift */; };
+		2B0BCD8D1A53C3960082D3C5 /* SliderControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD861A53C3960082D3C5 /* SliderControls.swift */; };
+		2B0BCD8E1A53C3960082D3C5 /* SliderControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD871A53C3960082D3C5 /* SliderControllerDelegate.swift */; };
+		2B0BCD8F1A53C3960082D3C5 /* SliderControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD881A53C3960082D3C5 /* SliderControllerView.swift */; };
+		2B0BCD901A53C3960082D3C5 /* SliderDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD891A53C3960082D3C5 /* SliderDefaults.swift */; };
+		2B0BCD911A53C3960082D3C5 /* SliderControlUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD8A1A53C3960082D3C5 /* SliderControlUserDefaults.swift */; };
+		2B0BCD931A53C3A50082D3C5 /* ControlsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD921A53C3A50082D3C5 /* ControlsStorage.swift */; };
+		2B0BCD961A53C5850082D3C5 /* iiLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD951A53C5850082D3C5 /* iiLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,15 @@
 		2B0BCD7A1A539D440082D3C5 /* iiFaderForAvAudioPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayerTests.swift; sourceTree = "<group>"; };
 		2B0BCD7C1A539D860082D3C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2B0BCD7F1A539F8C0082D3C5 /* weather_alert_sound_bible.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = weather_alert_sound_bible.mp3; sourceTree = "<group>"; };
+		2B0BCD841A53C3960082D3C5 /* ControlsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsData.swift; sourceTree = "<group>"; };
+		2B0BCD851A53C3960082D3C5 /* ControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlType.swift; sourceTree = "<group>"; };
+		2B0BCD861A53C3960082D3C5 /* SliderControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControls.swift; sourceTree = "<group>"; };
+		2B0BCD871A53C3960082D3C5 /* SliderControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerDelegate.swift; sourceTree = "<group>"; };
+		2B0BCD881A53C3960082D3C5 /* SliderControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerView.swift; sourceTree = "<group>"; };
+		2B0BCD891A53C3960082D3C5 /* SliderDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDefaults.swift; sourceTree = "<group>"; };
+		2B0BCD8A1A53C3960082D3C5 /* SliderControlUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControlUserDefaults.swift; sourceTree = "<group>"; };
+		2B0BCD921A53C3A50082D3C5 /* ControlsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsStorage.swift; sourceTree = "<group>"; };
+		2B0BCD951A53C5850082D3C5 /* iiLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +102,12 @@
 		2B0BCD541A539C990082D3C5 /* FaderForAvAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				2B0BCD821A53C37D0082D3C5 /* Controls */,
 				2B0BCD7E1A539F730082D3C5 /* Sounds */,
 				2B0BCD771A539CEC0082D3C5 /* Lib */,
+				2B0BCD941A53C5790082D3C5 /* Utils */,
 				2B0BCD571A539C990082D3C5 /* AppDelegate.swift */,
+				2B0BCD921A53C3A50082D3C5 /* ControlsStorage.swift */,
 				2B0BCD591A539C990082D3C5 /* ViewController.swift */,
 				2B0BCD5B1A539C990082D3C5 /* Main.storyboard */,
 				2B0BCD5E1A539C990082D3C5 /* Images.xcassets */,
@@ -135,6 +156,36 @@
 				2B0BCD7F1A539F8C0082D3C5 /* weather_alert_sound_bible.mp3 */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		2B0BCD821A53C37D0082D3C5 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BCD831A53C38A0082D3C5 /* Sliders */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		2B0BCD831A53C38A0082D3C5 /* Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BCD841A53C3960082D3C5 /* ControlsData.swift */,
+				2B0BCD851A53C3960082D3C5 /* ControlType.swift */,
+				2B0BCD861A53C3960082D3C5 /* SliderControls.swift */,
+				2B0BCD871A53C3960082D3C5 /* SliderControllerDelegate.swift */,
+				2B0BCD881A53C3960082D3C5 /* SliderControllerView.swift */,
+				2B0BCD891A53C3960082D3C5 /* SliderDefaults.swift */,
+				2B0BCD8A1A53C3960082D3C5 /* SliderControlUserDefaults.swift */,
+			);
+			name = Sliders;
+			sourceTree = "<group>";
+		};
+		2B0BCD941A53C5790082D3C5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BCD951A53C5850082D3C5 /* iiLayout.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +291,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0BCD791A539D090082D3C5 /* iiFaderForAvAudioPlayer.swift in Sources */,
+				2B0BCD911A53C3960082D3C5 /* SliderControlUserDefaults.swift in Sources */,
+				2B0BCD931A53C3A50082D3C5 /* ControlsStorage.swift in Sources */,
 				2B0BCD5A1A539C990082D3C5 /* ViewController.swift in Sources */,
 				2B0BCD581A539C990082D3C5 /* AppDelegate.swift in Sources */,
+				2B0BCD8C1A53C3960082D3C5 /* ControlType.swift in Sources */,
+				2B0BCD8E1A53C3960082D3C5 /* SliderControllerDelegate.swift in Sources */,
+				2B0BCD8D1A53C3960082D3C5 /* SliderControls.swift in Sources */,
+				2B0BCD901A53C3960082D3C5 /* SliderDefaults.swift in Sources */,
+				2B0BCD961A53C5850082D3C5 /* iiLayout.swift in Sources */,
+				2B0BCD8B1A53C3960082D3C5 /* ControlsData.swift in Sources */,
+				2B0BCD8F1A53C3960082D3C5 /* SliderControllerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
