@@ -19,7 +19,7 @@ public class iiFaderForAvAudioPlayer {
 
   // The higher the number - the higher the quality of fade
   // and it will consume more CPU.
-  var stepsPerSecond = 30.0
+  var volumeAlterationsPerSecond = 30.0
 
   private var fadeDurationSeconds = iiFaderForAvAudioPlayer_defaultFadeDurationSeconds
   private var fadeVelocity = iiFaderForAvAudioPlayer_defaultVelocity
@@ -96,7 +96,7 @@ public class iiFaderForAvAudioPlayer {
     stopTimer()
     currentStep = 0
 
-    timer = NSTimer.scheduledTimerWithTimeInterval(1 / stepsPerSecond, target: self,
+    timer = NSTimer.scheduledTimerWithTimeInterval(1 / volumeAlterationsPerSecond, target: self,
       selector: "timerFired:", userInfo: nil, repeats: true)
   }
 
@@ -116,7 +116,7 @@ public class iiFaderForAvAudioPlayer {
     }
 
     let currentTimeFrom0To1 = iiFaderForAvAudioPlayer.timeFrom0To1(
-      currentStep, fadeDurationSeconds: fadeDurationSeconds, stepsPerSecond: stepsPerSecond)
+      currentStep, fadeDurationSeconds: fadeDurationSeconds, volumeAlterationsPerSecond: volumeAlterationsPerSecond)
 
     var volumeMultiplier: Double
 
@@ -141,14 +141,14 @@ public class iiFaderForAvAudioPlayer {
   }
 
   var shouldStopTimer: Bool {
-    let totalSteps = fadeDurationSeconds * stepsPerSecond
+    let totalSteps = fadeDurationSeconds * volumeAlterationsPerSecond
     return Double(currentStep) > totalSteps
   }
 
   public class func timeFrom0To1(currentStep: Int, fadeDurationSeconds: Double,
-    stepsPerSecond: Double) -> Double {
+    volumeAlterationsPerSecond: Double) -> Double {
 
-    let totalSteps = fadeDurationSeconds * stepsPerSecond
+    let totalSteps = fadeDurationSeconds * volumeAlterationsPerSecond
     var result = Double(currentStep) / totalSteps
 
     result = makeSureValueIsBetween0and1(result)
