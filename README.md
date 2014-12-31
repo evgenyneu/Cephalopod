@@ -46,7 +46,7 @@ fader.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished 
 ### Set the quality of fade
 
 ```Swift
-fader.volumeAlterationsPerSecond = 100
+fader.volumeAlterationsPerSecond = 20
 ```
 
 Larger numbers will produce finer fade effect at expense of CPU juice.
