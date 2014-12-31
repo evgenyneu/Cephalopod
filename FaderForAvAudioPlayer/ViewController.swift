@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
+
+private let audioFileName = "weather_alert_sound_bible.mp3"
 
 class ViewController: UIViewController {
+  private var player: AVAudioPlayer?
+  private var fader: iiFaderForAvAudioPlayer?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,5 +26,28 @@ class ViewController: UIViewController {
   }
 
 
+  @IBAction func onPlayTapped(sender: AnyObject) {
+    playSound(audioFileName)
+  }
+
+  private func playSound(fileName: String) {
+    let error: NSErrorPointer = nil
+    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
+    let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: error)
+
+    if let currentPlayer = player {
+      currentPlayer.stop()
+    }
+
+    player = newPlayer
+    newPlayer.play()
+
+    if let currentFader = fader {
+      currentFader.stop()
+    }
+
+    fader = iiFaderForAvAudioPlayer(player: newPlayer)
+    fader?.fadeOut(fadeIntervalSeconds: 2)
+  }
 }
 
