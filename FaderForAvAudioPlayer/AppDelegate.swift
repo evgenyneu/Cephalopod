@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  FaderForAvAudioPlayer
-//
-//  Created by Evgenii Neumerzhitckii on 31/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -46,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   class var current: AppDelegate {
-    return UIApplication.sharedApplication().delegate as AppDelegate
+    return UIApplication.sharedApplication().delegate as! AppDelegate
   }
 }
 

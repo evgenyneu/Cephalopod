@@ -1,11 +1,3 @@
-//
-//  SliderControlsCreate.swift
-//  location-update
-//
-//  Created by Evgenii Neumerzhitckii on 30/11/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 class SliderControls {
@@ -15,8 +7,8 @@ class SliderControls {
     var previousControl:SliderControllerView? = nil
 
     for data in all {
-      let control = SliderControllerView(type: data.type,
-        defaults: data.defaults, delegate: delegate)
+      let control = SliderControllerView()
+      control.setup(data.type, defaults: data.defaults, delegate: delegate)
 
       data.view = control
 
@@ -28,7 +20,7 @@ class SliderControls {
   }
 
   private class func layoutControl(control: UIView, previous: UIView?) {
-    control.setTranslatesAutoresizingMaskIntoConstraints(false)
+    control.translatesAutoresizingMaskIntoConstraints = false
 
     if let currentPrevious = previous {
       iiLayout.stackVertically(currentPrevious, viewNext: control, margin: 15)

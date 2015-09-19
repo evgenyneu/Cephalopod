@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  FaderForAvAudioPlayer
-//
-//  Created by Evgenii Neumerzhitckii on 31/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
@@ -66,9 +58,8 @@ class ViewController: UIViewController {
 
   private func fadeIn(aPlayer: AVAudioPlayer) {
     fader =  ViewController.initFader(aPlayer, fader: fader)
-    let currentVolume = Double(aPlayer.volume)
     fader?.fadeIn(
-      duration: AppDelegate.current.controls.value(ControlType.duration),
+      AppDelegate.current.controls.value(ControlType.duration),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
       if finished {
@@ -79,10 +70,9 @@ class ViewController: UIViewController {
 
   private func fadeOut(aPlayer: AVAudioPlayer) {
     fader = ViewController.initFader(aPlayer, fader: fader)
-    let currentVolume = Double(aPlayer.volume)
 
     fader?.fadeOut(
-      duration: AppDelegate.current.controls.value(ControlType.duration),
+      AppDelegate.current.controls.value(ControlType.duration),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
       if finished {
@@ -93,13 +83,13 @@ class ViewController: UIViewController {
 
   private func playSound(fileName: String) {
     let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName, nil, nil)
-    let newPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
-    newPlayer.numberOfLoops = -1
+    let newPlayer = try? AVAudioPlayer(contentsOfURL: soundURL)
+    newPlayer?.numberOfLoops = -1
 
-    if let currentPlayer = player { return } // already playing
+    if player != nil { return } // already playing
 
     player = newPlayer
-    newPlayer.play()
+    newPlayer?.play()
   }
 
   private class func initFader(player: AVAudioPlayer, fader: iiFaderForAvAudioPlayer?)

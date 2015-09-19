@@ -1,19 +1,10 @@
-//
-//  iiSoundPlayerFadeOut.swift
-//  iiFaderForAvAudioPlayer
-//
-//  Created by Evgenii Neumerzhitckii on 31/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import Foundation
 import AVFoundation
 
 let iiFaderForAvAudioPlayer_defaultFadeDurationSeconds = 3.0
 let iiFaderForAvAudioPlayer_defaultVelocity = 2.0
 
-@objc
-public class iiFaderForAvAudioPlayer {
+public class iiFaderForAvAudioPlayer: NSObject {
   let player: AVAudioPlayer
   private var timer: NSTimer?
 
@@ -60,7 +51,7 @@ public class iiFaderForAvAudioPlayer {
       duration: duration, velocity: velocity, onFinished: onFinished)
   }
 
-  func fade(#fromVolume: Double, toVolume: Double,
+  func fade(fromVolume fromVolume: Double, toVolume: Double,
     duration: Double = iiFaderForAvAudioPlayer_defaultFadeDurationSeconds,
     velocity: Double = iiFaderForAvAudioPlayer_defaultVelocity, onFinished: ((Bool)->())? = nil) {
 
@@ -158,12 +149,12 @@ public class iiFaderForAvAudioPlayer {
 
   // Graph: https://www.desmos.com/calculator/wnstesdf0h
   public class func fadeOutVolumeMultiplier(timeFrom0To1: Double, velocity: Double) -> Double {
-    var time = makeSureValueIsBetween0and1(timeFrom0To1)
+    let time = makeSureValueIsBetween0and1(timeFrom0To1)
     return pow(M_E, -velocity * time) * (1 - time)
   }
 
   public class func fadeInVolumeMultiplier(timeFrom0To1: Double, velocity: Double) -> Double {
-    var time = makeSureValueIsBetween0and1(timeFrom0To1)
+    let time = makeSureValueIsBetween0and1(timeFrom0To1)
     return pow(M_E, velocity * (time - 1)) * time
   }
 

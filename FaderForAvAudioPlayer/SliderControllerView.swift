@@ -1,43 +1,33 @@
-//
-//  SliderControllerView.swift
-//  SpringAnimationCALayer
-//
-//  Created by Evgenii Neumerzhitckii on 2/11/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 class SliderControllerView: UIView {
-  private let type: ControlType!
-  private let label: UILabel!
-  private let slider: UISlider!
+  private var type: ControlType!
+  private var label: UILabel!
+  private var slider: UISlider!
   private weak var delegate: SliderControllerDelegate?
 
-  private let defaults: SliderDefaults!
-
-  init(type: ControlType, defaults: SliderDefaults, delegate: SliderControllerDelegate?) {
-
-    super.init()
-
+  private var defaults: SliderDefaults!
+  
+  func setup(type: ControlType, defaults: SliderDefaults, delegate: SliderControllerDelegate?) {
+    
     self.type = type
     self.delegate = delegate
     self.defaults = defaults
-
-    setTranslatesAutoresizingMaskIntoConstraints(false)
-
+    
+    translatesAutoresizingMaskIntoConstraints = false
+    
     label = UILabel()
     configureLabel()
-
+    
     slider = UISlider()
     configureSlider(slider)
-
+    
     SliderDefaults.set(slider, defaults: defaults)
-
+    
     if let valueFromDetauls = userDefaultsValue {
       slider.value = Float(valueFromDetauls)
     }
-
+    
     saveValueInUserDefaults()
     updateLabel()
   }
@@ -47,7 +37,7 @@ class SliderControllerView: UIView {
   }
 
   private func configureLabel() {
-    label.setTranslatesAutoresizingMaskIntoConstraints(false)
+    label.translatesAutoresizingMaskIntoConstraints = false
     addSubview(label)
 
     SliderControllerView.positionLabel(label, superview: self)
@@ -59,7 +49,7 @@ class SliderControllerView: UIView {
   }
 
   private func configureSlider(slider: UISlider) {
-    slider.setTranslatesAutoresizingMaskIntoConstraints(false)
+    slider.translatesAutoresizingMaskIntoConstraints = false
     addSubview(slider)
 
     slider.addTarget(self, action: "sliderChanged:", forControlEvents: UIControlEvents.ValueChanged)
@@ -107,7 +97,7 @@ class SliderControllerView: UIView {
     super.init(frame: frame)
   }
 
-  required init(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
