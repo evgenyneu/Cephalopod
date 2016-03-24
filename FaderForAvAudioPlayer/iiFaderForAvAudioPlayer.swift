@@ -128,7 +128,7 @@ public class iiFaderForAvAudioPlayer: NSObject {
 
     player.volume = Float(newVolume)
 
-    currentStep++
+    currentStep += 1
   }
 
   var shouldStopTimer: Bool {
