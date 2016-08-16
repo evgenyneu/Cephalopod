@@ -88,7 +88,7 @@ public class iiFaderForAvAudioPlayer: NSObject {
     currentStep = 0
 
     timer = NSTimer.scheduledTimerWithTimeInterval(1 / volumeAlterationsPerSecond, target: self,
-      selector: "timerFired:", userInfo: nil, repeats: true)
+      selector: #selector(iiFaderForAvAudioPlayer.timerFired(_:)), userInfo: nil, repeats: true)
   }
 
   private func stopTimer() {
