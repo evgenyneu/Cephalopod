@@ -26,7 +26,7 @@
 //     timer.cancel()
 //
 
-import UIKit
+import Foundation
 
 final class AutoCancellingTimer {
   private var timer: AutoCancellingTimerInstance?
