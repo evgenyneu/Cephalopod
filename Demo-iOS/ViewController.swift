@@ -2,7 +2,7 @@ import UIKit
 import AVFoundation
 import Cephalopod
 
-private let audioFileName = "i_ll_be_waiting_carlos_vallejo.mp3"
+private let audioFileName = "squid.mp3"
 
 class ViewController: UIViewController {
   fileprivate var player: AVAudioPlayer?
@@ -83,14 +83,14 @@ class ViewController: UIViewController {
   }
 
   fileprivate func playSound(_ fileName: String) {
-    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as CFString!, nil, nil)
-    let newPlayer = try? AVAudioPlayer(contentsOf: soundURL as! URL)
-    newPlayer?.numberOfLoops = -1
+    guard let path = Bundle.main.path(forResource: "squid", ofType: "mp3") else { return }
+    guard let newPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path)) else { return }    
+    newPlayer.numberOfLoops = -1
 
     if player != nil { return } // already playing
 
     player = newPlayer
-    newPlayer?.play()
+    newPlayer.play()
   }
 
   fileprivate class func initFader(_ player: AVAudioPlayer, fader: Cephalopod?) -> Cephalopod {

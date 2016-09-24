@@ -20,7 +20,7 @@
 		7EF4E26C1D96002900D8D2DC /* SliderControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2651D96002900D8D2DC /* SliderControllerView.swift */; };
 		7EF4E26D1D96002900D8D2DC /* SliderDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2661D96002900D8D2DC /* SliderDefaults.swift */; };
 		7EF4E26E1D96002900D8D2DC /* SliderControlUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2671D96002900D8D2DC /* SliderControlUserDefaults.swift */; };
-		7EF4E2711D96004900D8D2DC /* i_ll_be_waiting_carlos_vallejo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4E2701D96004900D8D2DC /* i_ll_be_waiting_carlos_vallejo.mp3 */; };
+		7EF4E2711D96004900D8D2DC /* squid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4E2701D96004900D8D2DC /* squid.mp3 */; };
 		7EF4E2741D96005C00D8D2DC /* iiLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2731D96005C00D8D2DC /* iiLayout.swift */; };
 		7EF4E27A1D96006B00D8D2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2751D96006B00D8D2DC /* AppDelegate.swift */; };
 		7EF4E27B1D96006B00D8D2DC /* ControlsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2761D96006B00D8D2DC /* ControlsStorage.swift */; };
@@ -70,7 +70,7 @@
 		7EF4E2651D96002900D8D2DC /* SliderControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerView.swift; sourceTree = "<group>"; };
 		7EF4E2661D96002900D8D2DC /* SliderDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDefaults.swift; sourceTree = "<group>"; };
 		7EF4E2671D96002900D8D2DC /* SliderControlUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControlUserDefaults.swift; sourceTree = "<group>"; };
-		7EF4E2701D96004900D8D2DC /* i_ll_be_waiting_carlos_vallejo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i_ll_be_waiting_carlos_vallejo.mp3; sourceTree = "<group>"; };
+		7EF4E2701D96004900D8D2DC /* squid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squid.mp3; sourceTree = "<group>"; };
 		7EF4E2731D96005C00D8D2DC /* iiLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiLayout.swift; sourceTree = "<group>"; };
 		7EF4E2751D96006B00D8D2DC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EF4E2761D96006B00D8D2DC /* ControlsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsStorage.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		7EF4E26F1D96003E00D8D2DC /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2701D96004900D8D2DC /* i_ll_be_waiting_carlos_vallejo.mp3 */,
+				7EF4E2701D96004900D8D2DC /* squid.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 				7EF4E27E1D96006B00D8D2DC /* LaunchScreen.xib in Resources */,
 				7EF4E27D1D96006B00D8D2DC /* Main.storyboard in Resources */,
 				7EF4E2531D95FFF000D8D2DC /* Assets.xcassets in Resources */,
-				7EF4E2711D96004900D8D2DC /* i_ll_be_waiting_carlos_vallejo.mp3 in Resources */,
+				7EF4E2711D96004900D8D2DC /* squid.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +564,7 @@
 				7E33CD381D960DF50091F7C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EF4E2301D95FED400D8D2DC /* Build configuration list for PBXProject "Cephalopod" */ = {
 			isa = XCConfigurationList;
