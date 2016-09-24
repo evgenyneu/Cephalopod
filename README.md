@@ -17,30 +17,26 @@ This library can help fading sounds in and out with AvAudioPlayer. One can set d
 
 ## Setup (Swift 3.0 / Xcode 8)
 
-<!-- There are three ways you can add Auk to your Xcode project.
+There are three ways you can add Auk to your Xcode project.
 
 #### Add source (iOS 7+)
 
-Simply add two files to your project:
+Simply add the [CephalopodDistrib.swift](https://github.com/evgenyneu/Cephalopod/blob/master/Distrib/CephalopodDistrib.swift) file to your project.
 
-1. Moa image downloader [MoaDistrib.swift](https://github.com/evgenyneu/moa/blob/master/Distrib/MoaDistrib.swift).
-2. Auk image slideshow [AukDistrib.swift](https://github.com/evgenyneu/Auk/blob/master/Distrib/AukDistrib.swift).
 
 #### Setup with Carthage (iOS 8+)
 
-1. Add `github "evgenyneu/Auk" ~> 7.0` to your Cartfile.
-2. Run `carthage update`.
-3. Add `moa` and `Auk` frameworks into your project.
+Alternatively, add `github "evgenyneu/Cephalopod" ~> 1.0` to your Cartfile and run `carthage update`.
 
 #### Setup with CocoaPods (iOS 8+)
 
 If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
-    use_frameworks!
-    target 'Your target name'
-    pod 'moa', '~> 8.0'
-    pod 'Auk', '~> 7.0' -->
-
+```
+use_frameworks!
+target 'Your target name'
+pod 'Cephalopod', '~> 1.0'
+```
 
 
 <!-- ### Legacy Swift versions
