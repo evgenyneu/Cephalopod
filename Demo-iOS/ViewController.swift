@@ -1,11 +1,12 @@
 import UIKit
 import AVFoundation
+import Cephalopod
 
 private let audioFileName = "i_ll_be_waiting_carlos_vallejo.mp3"
 
 class ViewController: UIViewController {
-  private var player: AVAudioPlayer?
-  private var fader: iiFaderForAvAudioPlayer?
+  fileprivate var player: AVAudioPlayer?
+  fileprivate var cephalopod: Cephalopod?
   @IBOutlet weak var sliderParentView: UIView!
   @IBOutlet weak var fadingLabel: UILabel!
 
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
       fadeIn(currentPlayer)
     }
 
-    UILabel.appearance().textColor = UIColor.whiteColor()
+    UILabel.appearance().textColor = UIColor.white
     UIView.appearance().tintColor = UIColor(
       red: 255.0/255,
       green: 134.0/255,
@@ -29,17 +30,17 @@ class ViewController: UIViewController {
       alpha: 1)
   }
 
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return UIStatusBarStyle.LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return UIStatusBarStyle.lightContent
   }
 
-  private func createControls() {
+  fileprivate func createControls() {
     SliderControls.create(AppDelegate.current.controls.allArray,
       delegate: nil, superview: sliderParentView)
   }
 
-  @IBAction func onFadeInTapped(sender: AnyObject) {
-    fadingLabel.hidden = false
+  @IBAction func onFadeInTapped(_ sender: AnyObject) {
+    fadingLabel.isHidden = false
     fadingLabel.text = "Fading in..."
 
     if let currentPlayer = player {
@@ -47,8 +48,8 @@ class ViewController: UIViewController {
     }
   }
 
-  @IBAction func onFadeOutTapped(sender: AnyObject) {
-    fadingLabel.hidden = false
+  @IBAction func onFadeOutTapped(_ sender: AnyObject) {
+    fadingLabel.isHidden = false
     fadingLabel.text = "Fading out..."
 
     if let currentPlayer = player {
@@ -56,34 +57,34 @@ class ViewController: UIViewController {
     }
   }
 
-  private func fadeIn(aPlayer: AVAudioPlayer) {
-    fader =  ViewController.initFader(aPlayer, fader: fader)
-    fader?.fadeIn(
-      AppDelegate.current.controls.value(ControlType.duration),
+  fileprivate func fadeIn(_ aPlayer: AVAudioPlayer) {
+    cephalopod = ViewController.initFader(aPlayer, fader: cephalopod)
+    cephalopod?.fadeIn(
+      duration: AppDelegate.current.controls.value(ControlType.duration),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
       if finished {
-        self.fadingLabel.hidden = true
+        self.fadingLabel.isHidden = true
       }
     }
   }
 
-  private func fadeOut(aPlayer: AVAudioPlayer) {
-    fader = ViewController.initFader(aPlayer, fader: fader)
+  fileprivate func fadeOut(_ aPlayer: AVAudioPlayer) {
+    cephalopod = ViewController.initFader(aPlayer, fader: cephalopod)
 
-    fader?.fadeOut(
-      AppDelegate.current.controls.value(ControlType.duration),
+    cephalopod?.fadeOut(
+      duration: AppDelegate.current.controls.value(ControlType.duration),
       velocity: AppDelegate.current.controls.value(ControlType.velocity)) { finished in
 
       if finished {
-        self.fadingLabel.hidden = true
+        self.fadingLabel.isHidden = true
       }
     }
   }
 
-  private func playSound(fileName: String) {
-    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName, nil, nil)
-    let newPlayer = try? AVAudioPlayer(contentsOfURL: soundURL)
+  fileprivate func playSound(_ fileName: String) {
+    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as CFString!, nil, nil)
+    let newPlayer = try? AVAudioPlayer(contentsOf: soundURL as! URL)
     newPlayer?.numberOfLoops = -1
 
     if player != nil { return } // already playing
@@ -92,14 +93,13 @@ class ViewController: UIViewController {
     newPlayer?.play()
   }
 
-  private class func initFader(player: AVAudioPlayer, fader: iiFaderForAvAudioPlayer?)
-    -> iiFaderForAvAudioPlayer {
+  fileprivate class func initFader(_ player: AVAudioPlayer, fader: Cephalopod?) -> Cephalopod {
 
     if let currentFader = fader {
       currentFader.stop()
     }
 
-    return iiFaderForAvAudioPlayer(player: player)
+    return Cephalopod(player: player)
   }
 }
 

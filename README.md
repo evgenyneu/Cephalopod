@@ -1,10 +1,53 @@
-# iOS sound fader for AvAudioPlayer written in Swift
+# Cephalopod, a sound fader for AvAudioPlayer written in Swift / iOS, tvOS, macOS and watchOS
 
-This is an iOS utility class that allows to fade sounds in and out with `AvAudioPlayer`. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/Auk.svg?style=flat)][cocoadocs]
+[![License](https://img.shields.io/cocoapods/l/Auk.svg?style=flat)](LICENSE)
+[![Platform](https://img.shields.io/cocoapods/p/Auk.svg?style=flat)][cocoadocs]
+[cocoadocs]: http://cocoadocs.org/docsets/Auk
+[carthage]: https://github.com/Carthage/Carthage
 
-## Installation
+This library allows to fade sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
 
-Copy [iiFaderForAvAudioPlayer.swift](https://raw.githubusercontent.com/evgenyneu/sound-fader-ios/master/FaderForAvAudioPlayer/iiFaderForAvAudioPlayer.swift) file to your project.
+
+<img src='https://raw.githubusercontent.com/evgenyneu/Auk/master/Graphics/Screenshots/auk_paged_image_scroller_ios.jpg' alt='Great Auks by John Gerrard Keulemans' width='382'>
+
+*"Juvenile cuttlefish camouflaged against the seafloor". Photo taken by [Raul654](https://en.wikipedia.org/wiki/User:Raul654). Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Camouflage.jpg).*
+
+
+## Setup (Swift 3.0 / Xcode 8)
+
+<!-- There are three ways you can add Auk to your Xcode project.
+
+#### Add source (iOS 7+)
+
+Simply add two files to your project:
+
+1. Moa image downloader [MoaDistrib.swift](https://github.com/evgenyneu/moa/blob/master/Distrib/MoaDistrib.swift).
+2. Auk image slideshow [AukDistrib.swift](https://github.com/evgenyneu/Auk/blob/master/Distrib/AukDistrib.swift).
+
+#### Setup with Carthage (iOS 8+)
+
+1. Add `github "evgenyneu/Auk" ~> 7.0` to your Cartfile.
+2. Run `carthage update`.
+3. Add `moa` and `Auk` frameworks into your project.
+
+#### Setup with CocoaPods (iOS 8+)
+
+If you are using CocoaPods add this text to your Podfile and run `pod install`.
+
+    use_frameworks!
+    target 'Your target name'
+    pod 'moa', '~> 8.0'
+    pod 'Auk', '~> 7.0' -->
+
+
+
+<!-- ### Legacy Swift versions
+
+Setup a [previous version](https://github.com/evgenyneu/Auk/wiki/Legacy-Swift-versions) of the library if you use an older version of Swift. -->
+
+
 
 ## Usage
 
@@ -77,9 +120,38 @@ Live graph demo: https://www.desmos.com/calculator/wnstesdf0h
 
 ## Attribution
 
-The lovely music was recorded by Carlos Vallejo and downloaded from
-http://www.flashkit.com/loops/Easy_Listening/Ill_Be_-Carlos_V-10012/index.php
 
-## Project home
 
-https://github.com/evgenyneu/sound-fader-ios
+
+## Alternative solutions
+
+<!-- Here is a list of other image slideshow libraries for iOS.
+
+
+* [kimar/KIImagePager](https://github.com/kimar/KIImagePager)
+* [kirualex/KASlideShow](https://github.com/kirualex/KASlideShow)
+* [nicklockwood/iCarousel](https://github.com/nicklockwood/iCarousel)
+* [nicklockwood/SwipeView](https://github.com/nicklockwood/SwipeView)
+* [paritsohraval100/PJR-ScrollView-Slider](https://github.com/paritsohraval100/PJR-ScrollView-Slider)
+* [zvonicek/ImageSlideshow](https://github.com/zvonicek/ImageSlideshow)
+ -->
+
+## Thanks 👍
+
+<!-- * [eyaldar](https://github.com/eyaldar) added `updatePage` method.
+* [Valpertui](https://github.com/Valpertui) added `removePage` and `removeCurrentPage` methods.
+ -->
+## Credits
+
+* The lovely music was recorded by [Carlos Vallejo](http://www.flashkit.com/loops/Easy_Listening/Ill_Be_-Carlos_V-10012/index.php).
+
+* "Juvenile cuttlefish camouflaged against the seafloor". Photo taken by [Raul654](https://en.wikipedia.org/wiki/User:Raul654). Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Camouflage.jpg).
+
+
+## License
+
+Cephalopod is released under the [MIT License](LICENSE).
+
+## Feedback is welcome
+
+If you notice any issue, got stuck or just want to chat feel free to create an issue. I will be happy to help you.

@@ -1,14 +1,14 @@
 import UIKit
 
 class SliderControllerView: UIView {
-  private var type: ControlType!
-  private var label: UILabel!
-  private var slider: UISlider!
-  private weak var delegate: SliderControllerDelegate?
+  fileprivate var type: ControlType!
+  fileprivate var label: UILabel!
+  fileprivate var slider: UISlider!
+  fileprivate weak var delegate: SliderControllerDelegate?
 
-  private var defaults: SliderDefaults!
+  fileprivate var defaults: SliderDefaults!
   
-  func setup(type: ControlType, defaults: SliderDefaults, delegate: SliderControllerDelegate?) {
+  func setup(_ type: ControlType, defaults: SliderDefaults, delegate: SliderControllerDelegate?) {
     
     self.type = type
     self.delegate = delegate
@@ -36,31 +36,31 @@ class SliderControllerView: UIView {
     return Double(slider.value)
   }
 
-  private func configureLabel() {
+  fileprivate func configureLabel() {
     label.translatesAutoresizingMaskIntoConstraints = false
     addSubview(label)
 
     SliderControllerView.positionLabel(label, superview: self)
   }
 
-  private class func positionLabel(label: UIView, superview: UIView) {
+  fileprivate class func positionLabel(_ label: UIView, superview: UIView) {
     iiLayout.alignTop(label, anotherView: superview)
     iiLayout.fullWidthInParent(label)
   }
 
-  private func configureSlider(slider: UISlider) {
+  fileprivate func configureSlider(_ slider: UISlider) {
     slider.translatesAutoresizingMaskIntoConstraints = false
     addSubview(slider)
 
-    slider.addTarget(self, action: #selector(SliderControllerView.sliderChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
+    slider.addTarget(self, action: #selector(SliderControllerView.sliderChanged(_:)), for: UIControlEvents.valueChanged)
 
-    slider.addTarget(self, action: #selector(SliderControllerView.sliderChangeEnded(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+    slider.addTarget(self, action: #selector(SliderControllerView.sliderChangeEnded(_:)), for: UIControlEvents.touchUpInside)
 
 
     SliderControllerView.positionSlider(label, slider: slider, superview: self)
   }
 
-  func sliderChanged(slider: UISlider) {
+  func sliderChanged(_ slider: UISlider) {
 
     if defaults.step != 0 {
       slider.value = Float(defaults.step * round(Double(slider.value) / defaults.step))
@@ -71,16 +71,16 @@ class SliderControllerView: UIView {
     updateLabel()
   }
 
-  private func updateLabel() {
+  fileprivate func updateLabel() {
     SliderControllerView.updateSliderLabel(slider, label: label, caption: type.rawValue,
       valueNames: defaults.valueNames)
   }
 
-  func sliderChangeEnded(slider: UISlider) {
+  func sliderChangeEnded(_ slider: UISlider) {
     delegate?.sliderControllerDelegate_OnChangeEnded()
   }
 
-  private class func updateSliderLabel(slider: UISlider, label: UILabel, caption: String,
+  fileprivate class func updateSliderLabel(_ slider: UISlider, label: UILabel, caption: String,
     valueNames: [Double: String]) {
 
     var value = ""
@@ -101,13 +101,13 @@ class SliderControllerView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  private class func positionSlider(caption: UIView, slider: UIView, superview: UIView) {
+  fileprivate class func positionSlider(_ caption: UIView, slider: UIView, superview: UIView) {
     iiLayout.fullWidthInParent(slider)
     iiLayout.stackVertically(caption, viewNext: slider, margin: 3)
     iiLayout.alignBottom(slider, anotherView: superview)
   }
 
-  private class func formatValue(value: Double) -> String {
+  fileprivate class func formatValue(_ value: Double) -> String {
     return String(format: "%.3f", value)
   }
 
@@ -117,7 +117,7 @@ class SliderControllerView: UIView {
     updateLabel()
   }
 
-  func setValue(value: Double) {
+  func setValue(_ value: Double) {
     slider.value = Float(value)
     saveValueInUserDefaults()
     updateLabel()
@@ -126,15 +126,15 @@ class SliderControllerView: UIView {
   // User defauts
   // --------------------
 
-  private var defaultsKey: String {
+  fileprivate var defaultsKey: String {
     return  SliderControlUserDefaults.keyName(type)
   }
 
-  private var userDefaultsValue: Double? {
+  fileprivate var userDefaultsValue: Double? {
     return SliderControlUserDefaults.value(type)
   }
 
-  private func saveValueInUserDefaults() {
+  fileprivate func saveValueInUserDefaults() {
     SliderControlUserDefaults.saveValue(Double(slider.value), type: type)
   }
 }

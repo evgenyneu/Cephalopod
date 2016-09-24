@@ -1,8 +1,8 @@
 import Foundation
 
 class ControlsStorage {
-  private(set) var allArray = [ControlData]()
-  private(set) var all = [ControlType:ControlData]()
+  fileprivate(set) var allArray = [ControlData]()
+  fileprivate(set) var all = [ControlType:ControlData]()
 
   func setup() {
     allArray.append(ControlData(
@@ -23,7 +23,7 @@ class ControlsStorage {
     }
   }
 
-  func value(type: ControlType) -> Double {
+  func value(_ type: ControlType) -> Double {
     if let data = all[type] {
       if let sliderView = data.view {
         return sliderView.value
@@ -38,7 +38,7 @@ class ControlsStorage {
     return 0
   }
 
-  func setValue(type: ControlType, value: Double) {
+  func setValue(_ type: ControlType, value: Double) {
     if let data = all[type] {
       if let sliderView = data.view {
         sliderView.setValue(value)

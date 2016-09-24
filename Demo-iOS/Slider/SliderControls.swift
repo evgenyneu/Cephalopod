@@ -1,7 +1,7 @@
 import UIKit
 
 class SliderControls {
-  class func create(all: [ControlData], delegate: SliderControllerDelegate?,
+  class func create(_ all: [ControlData], delegate: SliderControllerDelegate?,
     superview: UIView) {
 
     var previousControl:SliderControllerView? = nil
@@ -19,7 +19,7 @@ class SliderControls {
     }
   }
 
-  private class func layoutControl(control: UIView, previous: UIView?) {
+  fileprivate class func layoutControl(_ control: UIView, previous: UIView?) {
     control.translatesAutoresizingMaskIntoConstraints = false
 
     if let currentPrevious = previous {

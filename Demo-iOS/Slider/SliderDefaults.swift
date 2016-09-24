@@ -13,7 +13,7 @@ struct SliderDefaults {
     self.maximumValue = maximumValue
   }
 
-  static func set(slider: UISlider, defaults: SliderDefaults) {
+  static func set(_ slider: UISlider, defaults: SliderDefaults) {
     slider.minimumValue = Float(defaults.minimumValue)
     slider.maximumValue = Float(defaults.maximumValue)
     slider.value = Float(defaults.value)
