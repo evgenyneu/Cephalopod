@@ -7,7 +7,7 @@
 [cocoadocs]: http://cocoadocs.org/docsets/Cephalopod
 [carthage]: https://github.com/Carthage/Carthage
 
-This library can help fading sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to exponential.
+This library can help fading sounds in and out with AvAudioPlayer. One can set duration, velocity of the fade and a completion function. Velocity can vary from linear to exponential.
 
 ```Swift
 cephalopod = Cephalopod(player: player)
