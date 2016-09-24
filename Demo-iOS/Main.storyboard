@@ -73,6 +73,7 @@
                     <connections>
                         <outlet property="fadingLabel" destination="xjx-Kg-Xaz" id="Fjg-XO-3sE"/>
                         <outlet property="sliderParentView" destination="Hxc-9T-D11" id="XSw-eW-u1Y"/>
+                        <outlet property="squidImage" destination="VZB-Ms-Q2b" id="Eqq-Fj-7uh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
