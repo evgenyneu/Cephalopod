@@ -66,7 +66,7 @@ var cephalopod: Cephalopod?
 override func viewDidLoad() {
   super.viewDidLoad()
 
-  // Create player instance
+  // Create a player instance
   guard let path = Bundle.main.path(forResource: "squid", ofType: "mp3") else { return }
   guard let player = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path)) else { return }
   playerInstance = player
