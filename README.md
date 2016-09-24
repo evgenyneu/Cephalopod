@@ -9,6 +9,11 @@
 
 This library can help fading sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
 
+```Swift
+cephalopod = Cephalopod(player: player)
+cephalopod?.fadeIn()
+```
+
 
 <img src='https://github.com/evgenyneu/Cephalopod/raw/master/graphics/cuttlefish.jpg' alt='Juvenile cuttlefish camouflaged against the seafloor' width='382'>
 
