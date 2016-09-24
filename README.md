@@ -155,7 +155,7 @@ Here is a list of other sound libraries for iOS.
 
 * The lovely music was recorded by [Carlos Vallejo](http://www.flashkit.com/loops/Easy_Listening/Ill_Be_-Carlos_V-10012/index.php).
 
-* "Juvenile cuttlefish camouflaged against the seafloor" photo was taken by [Raul654](https://en.wikipedia.org/wiki/User:Raul654). Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Camouflage.jpg).
+* "*Juvenile cuttlefish camouflaged against the seafloor*" photo was taken by [Raul654](https://en.wikipedia.org/wiki/User:Raul654). Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Camouflage.jpg).
 
 
 ## License
