@@ -44,9 +44,9 @@ pod 'Cephalopod', '~> 1.0'
 ```
 
 
-<!-- ### Legacy Swift versions
+### Legacy Swift versions
 
-Setup a [previous version](https://github.com/evgenyneu/Auk/wiki/Legacy-Swift-versions) of the library if you use an older version of Swift. -->
+Setup a [previous version](https://github.com/evgenyneu/Cephalopod/wiki/Legacy-Swift-versions) of the library if you use an older version of Swift.
 
 
 
