@@ -1,16 +1,53 @@
 import Foundation
 import AVFoundation
 
+/**
+ 
+A sound fader for AvAudioPlayer written in Swift - iOS, tvOS and macOS.
+ 
+Usage
+--------
+ 
+   import AVFoundation
+   import Cephalopod // For CocoaPods and Carthage
+   // ---
+   
+   var playerInstance: AVAudioPlayer?
+   var cephalopod: Cephalopod?
+   
+   override func viewDidLoad() {
+     super.viewDidLoad()
+     
+     // Create player instance
+     guard let path = Bundle.main.path(forResource: "squid", ofType: "mp3") else { return }
+     guard let player = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path)) else { return }
+     playerInstance = player
+     
+     // Start audio playback
+     player.play()
+     player.volume = 0
+     
+     // Fade in the sound
+     cephalopod = Cephalopod(player: player)
+     cephalopod?.fadeIn()
+   }
+   
+*/
 open class Cephalopod: NSObject {
+  /**
+   
+  Changes the quality of the fade effect. The higher number means the higher the quality of fade. Higher values consume more CPU resources. Default: 30.
+   
+  */
+  open var volumeAlterationsPerSecond = 30.0
+  
   static let defaultFadeDurationSeconds = 3.0
   static let defaultVelocity = 2.0
 
   let player: AVAudioPlayer
   var timer: AutoCancellingTimer?
   
-  // The higher the number - the higher the quality of fade
-  // and it will consume more CPU.
-  open var volumeAlterationsPerSecond = 30.0
+  
   
   private var fadeDurationSeconds = defaultFadeDurationSeconds
   private var fadeVelocity = defaultVelocity
@@ -22,6 +59,14 @@ open class Cephalopod: NSObject {
   
   private var onFinished: ((Bool)->())? = nil
   
+  
+  /**
+   
+  Instantiate a cephalopod fader object.
+   
+  - parameter player: an instance of AVAudioPlayer.
+   
+  */
   public init(player: AVAudioPlayer) {
     self.player = player
   }
@@ -31,10 +76,17 @@ open class Cephalopod: NSObject {
     stop()
   }
   
-  private var fadeIn: Bool {
-    return fromVolume < toVolume
-  }
-  
+  /**
+   
+  Fade in the sound by gradually increasing the volume.
+   
+  - parameter duration: duration of the fade, in seconds. Default duration: 3 seconds.
+   
+  - parameter velocity: a number specifying how fast the sound volume is changing. Velocity of 0 creates a linear fade. Values greater than zero produce more exponential fade affect. Exponential fade sounds more gradual to a human ear. The fade sounds most natural with velocity parameter from 2 to 5. Default value: 2.
+   
+  - parameter onFinished: an optional closure that will be called after the fade has ended. The closure will be passed a boolean parameter `finished` indicating whether the fading has reached its end value (true) or if the fading has been cancelled (false).
+   
+  */
   open func fadeIn(duration: Double = defaultFadeDurationSeconds,
                    velocity: Double = defaultVelocity, onFinished: ((Bool)->())? = nil) {
     
@@ -43,6 +95,17 @@ open class Cephalopod: NSObject {
       duration: duration, velocity: velocity, onFinished: onFinished)
   }
   
+  /**
+   
+  Fade out the sound by gradually decreasing the volume.
+   
+  - parameter duration: duration of the fade, in seconds. Default duration: 3 seconds.
+   
+  - parameter velocity: a number specifying how fast the sound volume is changing. Velocity of 0 creates a linear fade. Values greater than zero produce more exponential fade affect. Exponential fade sounds more gradual to a human ear. The fade sounds most natural with velocity parameter from 2 to 5. Default value: 2.
+   
+  - parameter onFinished: an optional closure that will be called after the fade has ended. The closure will be passed a boolean parameter `finished` indicating whether the fading has reached its end value (true) or if the fading has been cancelled (false).
+   
+  */
   open func fadeOut(duration: Double = defaultFadeDurationSeconds,
                     velocity: Double = defaultVelocity, onFinished: ((Bool)->())? = nil) {
     
@@ -51,6 +114,21 @@ open class Cephalopod: NSObject {
       duration: duration, velocity: velocity, onFinished: onFinished)
   }
   
+  /**
+   
+  Gradually change the volume of the sound.
+   
+  - parameter fromVolume: the starting volume, a value from 0 to 1.
+   
+  - parameter endVolume: the end volume that will be reached at the end of the fade, a value from 0 to 1.
+   
+  - parameter duration: duration of the fade, in seconds. Default duration: 3 seconds.
+   
+  - parameter velocity: a number specifying how fast the sound volume is changing. Velocity of 0 creates a linear fade. Values greater than zero produce more exponential fade affect. Exponential fade sounds more gradual to a human ear. Default value: 2. The fade sounds most natural with velocity parameter from 2 to 5.
+   
+  - parameter onFinished: an optional closure that will be called after the fade has ended. The closure will be passed a boolean parameter `finished` indicating whether the fading has reached its end value (true) or if the fading has been cancelled (false).
+   
+  */
   open func fade(fromVolume: Double, toVolume: Double,
                  duration: Double = defaultFadeDurationSeconds,
                  velocity: Double = defaultVelocity, onFinished: ((Bool)->())? = nil) {
@@ -73,9 +151,13 @@ open class Cephalopod: NSObject {
     startTimer()
   }
   
-  // Stop fading. Does not stop the sound.
+  /// Stop changing the volume. It does not stop the playback.
   open func stop() {
     stopTimer()
+  }
+  
+  private var fadeIn: Bool {
+    return fromVolume < toVolume
   }
   
   private func callOnFinished(finished: Bool) {
