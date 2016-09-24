@@ -132,7 +132,7 @@ Live graph demo: https://www.desmos.com/calculator/wnstesdf0h
 
 ## Demo app
 
-<img src="https://github.com/evgenyneu/Cephalopod/raw/master/graphics/cephalopod-fader-ios-swift.png" alt="Cephalopod sound fader for iOS written in swift" width="320">
+<img src="https://github.com/evgenyneu/Cephalopod/raw/master/graphics/cephalopod-fader-swift.png" alt="Cephalopod sound fader for iOS written in swift" width="320">
 
 ## Attribution
 
