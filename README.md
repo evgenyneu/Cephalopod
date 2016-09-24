@@ -86,21 +86,32 @@ override func viewDidLoad() {
 ```Swift
 cephalopod?.fadeIn()
 cephalopod?.fadeOut()
-```
 
-### Set fade duration and velocity
-
-```Swift
+// Supply fade duration and velocity, in seconds
 cephalopod?.fadeIn(duration: 3, velocity: 2)
+cephalopod?.fadeOut(duration: 3, velocity: 2)
+
+// Supply finish closure
+cephalopod?.fadeIn(duration: 3, velocity: 2) { finished in }
+cephalopod?.fadeOut(duration: 3, velocity: 2)  { finished in }
 ```
 
-### Supply fade start/end volume, completion callback
+### Supply fade start/end volume and completion callback
 
 ```Swift
 cephalopod?.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished in
   print("Fade in finished")
 }
 ```
+
+`fromVolume` - the start volume, a number between 0 and 1.
+
+`toVolume` - the end volume, a number between 0 and 1.
+
+`velocity` - a number specifying how fast the sound volume is changing. Velocity of 0 creates a linear fade. Values greater than zero produce more exponential fade affect. Exponential fade sounds more gradual to a human ear. The fade sounds most natural with velocity parameter from 2 to 5. Default value: 2.
+
+`onFinished` - an optional closure that will be called after the fade has ended. The closure will be passed a boolean parameter `finished` indicating whether the fading has reached its end value (`true`) or if the fading has been cancelled (`false`).
+
 
 ### Set the quality of fade
 
