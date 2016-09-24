@@ -1,4 +1,4 @@
-# Cephalopod, a sound fader for AvAudioPlayer written in Swift / iOS, tvOS, macOS and watchOS
+# Cephalopod, a sound fader for AvAudioPlayer written in Swift - iOS, tvOS, macOS and watchOS
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/Auk.svg?style=flat)][cocoadocs]
