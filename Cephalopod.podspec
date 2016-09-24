@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                    DESC
   s.authors     = { "Evgenii Neumerzhitckii" => "sausageskin@gmail.com" }
   s.source      = { :git => "https://github.com/evgenyneu/Cephalopod.git", :tag => s.version }
-  s.screenshots  = "https://raw.githubusercontent.com/evgenyneu/moa/master/Graphics/Hunting_Moa.jpg"
+  s.screenshots  = "https://github.com/evgenyneu/Cephalopod/raw/master/graphics/cephalopod_logo.png"
   s.source_files = "Cephalopod/**/*.swift"
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
