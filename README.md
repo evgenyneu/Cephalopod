@@ -7,7 +7,7 @@
 [cocoadocs]: http://cocoadocs.org/docsets/Cephalopod
 [carthage]: https://github.com/Carthage/Carthage
 
-This library can help fading sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
+This library can help fading sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to exponential.
 
 ```Swift
 cephalopod = Cephalopod(player: player)
@@ -126,7 +126,7 @@ The following graph shows how sound volume changes during the fade.
 
 Where `x` is time and `v` is velocity.
 
-Velocity of 0 creates a linear fade. Values greater than zero produce more logarithmic fade affect. Logarithmic fade sounds more gradual to a human ear. I personally use velocity values from 2 to 5.
+Velocity of 0 creates a linear fade. Values greater than zero produce more exponential fade affect. Exponential fade sounds more gradual to a human ear. I personally use velocity values from 2 to 5.
 
 Live graph demo: https://www.desmos.com/calculator/wnstesdf0h
 
