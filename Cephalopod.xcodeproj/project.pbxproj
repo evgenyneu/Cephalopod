@@ -39,6 +39,7 @@
 		7E5029E81D962E81008140D9 /* Cephalopod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297A1D962C63008140D9 /* Cephalopod.swift */; };
 		7E5029E91D962E81008140D9 /* AutoCancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */; };
 		7EDD8B151D96513000E96D6E /* FadeOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDD8B141D96513000E96D6E /* FadeOutTests.swift */; };
+		7EDD8B171D9653CC00E96D6E /* FadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDD8B161D9653CC00E96D6E /* FadeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		7E5029D31D962E64008140D9 /* Cephalopod-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cephalopod-tvOS.h"; sourceTree = "<group>"; };
 		7E5029D41D962E64008140D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EDD8B141D96513000E96D6E /* FadeOutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutTests.swift; sourceTree = "<group>"; };
+		7EDD8B161D9653CC00E96D6E /* FadeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				7E4B149F1D964D2400E77CE4 /* Helpers */,
 				7E4B149C1D964CA800E77CE4 /* sounds */,
 				7E4B14931D964BD700E77CE4 /* FadeInTests.swift */,
+				7EDD8B161D9653CC00E96D6E /* FadeTests.swift */,
 				7EDD8B141D96513000E96D6E /* FadeOutTests.swift */,
 				7E4B14951D964BD700E77CE4 /* Info.plist */,
 			);
@@ -537,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E4B14941D964BD700E77CE4 /* FadeInTests.swift in Sources */,
+				7EDD8B171D9653CC00E96D6E /* FadeTests.swift in Sources */,
 				7EDD8B151D96513000E96D6E /* FadeOutTests.swift in Sources */,
 				7E4B14A11D964D2A00E77CE4 /* TestBundle.swift in Sources */,
 			);
