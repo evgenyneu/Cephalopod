@@ -100,7 +100,7 @@ cephalopod?.fadeOut(duration: 3, velocity: 2)  { finished in }
 
 ```Swift
 cephalopod?.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished in
-  print("Fade in has finished")
+  print("Finished fading")
 }
 ```
 
