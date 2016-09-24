@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E4B14941D964BD700E77CE4 /* CephalopodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4B14931D964BD700E77CE4 /* CephalopodTests.swift */; };
+		7E4B14941D964BD700E77CE4 /* FadeInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4B14931D964BD700E77CE4 /* FadeInTests.swift */; };
 		7E4B14961D964BD700E77CE4 /* Cephalopod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E50296F1D962C1A008140D9 /* Cephalopod.framework */; };
 		7E4B149E1D964CB900E77CE4 /* squid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B149D1D964CB900E77CE4 /* squid.mp3 */; };
 		7E4B14A11D964D2A00E77CE4 /* TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4B14A01D964D2A00E77CE4 /* TestBundle.swift */; };
@@ -73,7 +73,7 @@
 
 /* Begin PBXFileReference section */
 		7E4B14911D964BD700E77CE4 /* CephalopodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CephalopodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E4B14931D964BD700E77CE4 /* CephalopodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CephalopodTests.swift; sourceTree = "<group>"; };
+		7E4B14931D964BD700E77CE4 /* FadeInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInTests.swift; sourceTree = "<group>"; };
 		7E4B14951D964BD700E77CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4B149D1D964CB900E77CE4 /* squid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squid.mp3; sourceTree = "<group>"; };
 		7E4B14A01D964D2A00E77CE4 /* TestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBundle.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			children = (
 				7E4B149F1D964D2400E77CE4 /* Helpers */,
 				7E4B149C1D964CA800E77CE4 /* sounds */,
-				7E4B14931D964BD700E77CE4 /* CephalopodTests.swift */,
+				7E4B14931D964BD700E77CE4 /* FadeInTests.swift */,
 				7E4B14951D964BD700E77CE4 /* Info.plist */,
 			);
 			path = CephalopodTests;
@@ -533,7 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E4B14941D964BD700E77CE4 /* CephalopodTests.swift in Sources */,
+				7E4B14941D964BD700E77CE4 /* FadeInTests.swift in Sources */,
 				7E4B14A11D964D2A00E77CE4 /* TestBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
