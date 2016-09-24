@@ -22,16 +22,18 @@ class ViewController: UIViewController {
       fadeIn(currentPlayer)
     }
 
-    UILabel.appearance().textColor = UIColor.white
-    UIView.appearance().tintColor = UIColor(
-      red: 255.0/255,
-      green: 134.0/255,
-      blue: 170.0/255,
+    UILabel.appearance().textColor = UIColor(
+      red: 59/255,
+      green: 69.0/255,
+      blue: 103.0/255,
       alpha: 1)
-  }
-
-  override var preferredStatusBarStyle : UIStatusBarStyle {
-    return UIStatusBarStyle.lightContent
+    
+    
+    UIView.appearance().tintColor = UIColor(
+      red: 82/255,
+      green: 120.0/255,
+      blue: 231.0/255,
+      alpha: 1)
   }
 
   fileprivate func createControls() {
