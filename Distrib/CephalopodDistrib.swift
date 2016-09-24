@@ -172,8 +172,9 @@ open class Cephalopod: NSObject {
   }
   
   private func callOnFinished(finished: Bool) {
-    onFinished?(finished)
-    onFinished = nil
+    let saveOnFinished: ((Bool)->())? = onFinished
+    onFinished = nil // Make sure it is called only once
+    saveOnFinished?(finished)
   }
   
   private func startTimer() {

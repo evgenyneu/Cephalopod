@@ -87,15 +87,15 @@ cephalopod?.fadeIn(duration: 3, velocity: 2)
 ### Supply fade start/end volume, completion callback
 
 ```Swift
-fader.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished in
-  // fading finished
+cephalopod?.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { finished in
+  print("Fade in finished")
 }
 ```
 
 ### Set the quality of fade
 
 ```Swift
-fader.volumeAlterationsPerSecond = 20
+cephalopod?.volumeAlterationsPerSecond = 20
 ```
 
 Larger numbers will produce finer fade effect at expense of CPU juice.
