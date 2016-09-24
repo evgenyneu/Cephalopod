@@ -270,8 +270,7 @@
 					};
 					7E5029811D962C78008140D9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BS677JRE62;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					7E5029B91D962D5B008140D9 = {
 						CreatedOnToolsVersion = 8.0;
@@ -506,7 +505,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BS677JRE62;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -521,7 +520,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BS677JRE62;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,6 +574,7 @@
 				7E5029791D962C1A008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E5029911D962C78008140D9 /* Build configuration list for PBXNativeTarget "Demo-iOS" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +583,7 @@
 				7E5029931D962C78008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E5029BA1D962D5B008140D9 /* Build configuration list for PBXLegacyTarget "ConcatenateSwiftFiles" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +592,7 @@
 				7E5029BC1D962D5B008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
