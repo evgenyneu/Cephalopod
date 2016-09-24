@@ -3,9 +3,15 @@ import AVFoundation
 @testable import Cephalopod
 
 class FadeInTests: XCTestCase {
+  
+  var player: AVAudioPlayer!
+  var cephalopod: Cephalopod!
     
   override func setUp() {
     super.setUp()
+    
+    player = TestBundle.soundPlayer()
+    cephalopod = Cephalopod(player: player)
   }
   
   override func tearDown() {
@@ -15,16 +21,6 @@ class FadeInTests: XCTestCase {
   
   func testFadeIn_callFinishClosure() {
     let testExpectation = expectation(description: "test expectation")
-    
-    // Create player instance
-    let player = TestBundle.soundPlayer()
-    
-    // Start audio playback
-    player.play()
-    player.volume = 0
-    
-    // Fade in the sound
-    let cephalopod = Cephalopod(player: player)
     
     var finishedArgument: Bool?
     
@@ -38,18 +34,8 @@ class FadeInTests: XCTestCase {
     XCTAssert(finishedArgument!)
   }
   
-  func testFadeIn_cancel_callFinishClosure() {
+  func testFadeIn_cancelByCallingStop_callFinishClosure() {
     let testExpectation = expectation(description: "test expectation")
-    
-    // Create player instance
-    let player = TestBundle.soundPlayer()
-    
-    // Start audio playback
-    player.play()
-    player.volume = 0
-    
-    // Fade in the sound
-    let cephalopod = Cephalopod(player: player)
     
     var finishedArgument: Bool?
     
@@ -62,7 +48,24 @@ class FadeInTests: XCTestCase {
     
     waitForExpectations(timeout: 0.2) { error in }
     
-    XCTAssert(finishedArgument!)
+    XCTAssertFalse(finishedArgument!)
+  }
+  
+  func testFadeIn_cancelByCallingFadeAgain_callFinishClosure() {
+    let testExpectation = expectation(description: "test expectation")
+    
+    var finishedArgument: Bool?
+    
+    cephalopod.fadeIn(duration: 0.1, velocity: 1, onFinished: { finished in
+      finishedArgument = finished
+      testExpectation.fulfill()
+    })
+    
+    cephalopod.fadeIn()
+    
+    waitForExpectations(timeout: 0.2) { error in }
+    
+    XCTAssertFalse(finishedArgument!)
   }
 
 }

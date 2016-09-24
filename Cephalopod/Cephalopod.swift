@@ -153,6 +153,7 @@ open class Cephalopod: NSObject {
   
   /// Stop changing the volume. It does not stop the playback.
   open func stop() {
+    callOnFinished(finished: false)
     stopTimer()
   }
   

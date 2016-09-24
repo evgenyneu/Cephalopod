@@ -8,6 +8,9 @@ class TestBundle {
   
   class func soundPlayer() -> AVAudioPlayer {
     let path = soundPath()
-    return try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+    let player =  try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+    player.play()
+    player.volume = 0
+    return player
   }
 }
