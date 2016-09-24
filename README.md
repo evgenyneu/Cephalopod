@@ -141,22 +141,16 @@ Live graph demo: https://www.desmos.com/calculator/wnstesdf0h
 
 ## Alternative solutions
 
-<!-- Here is a list of other image slideshow libraries for iOS.
+Here is a list of other sound libraries for iOS.
 
+* [AudioPlayerSwift](https://github.com/tbaranes/AudioPlayerSwift)
+* [AudioPlayer](https://github.com/delannoyk/AudioPlayer)
 
-* [kimar/KIImagePager](https://github.com/kimar/KIImagePager)
-* [kirualex/KASlideShow](https://github.com/kirualex/KASlideShow)
-* [nicklockwood/iCarousel](https://github.com/nicklockwood/iCarousel)
-* [nicklockwood/SwipeView](https://github.com/nicklockwood/SwipeView)
-* [paritsohraval100/PJR-ScrollView-Slider](https://github.com/paritsohraval100/PJR-ScrollView-Slider)
-* [zvonicek/ImageSlideshow](https://github.com/zvonicek/ImageSlideshow)
- -->
 
 ## Thanks 👍
 
-<!-- * [eyaldar](https://github.com/eyaldar) added `updatePage` method.
-* [Valpertui](https://github.com/Valpertui) added `removePage` and `removeCurrentPage` methods.
- -->
+* [nschucky](https://github.com/nschucky) for updating to Swift 2.2 selector syntax.
+
 ## Credits
 
 * The lovely music was recorded by [Carlos Vallejo](http://www.flashkit.com/loops/Easy_Listening/Ill_Be_-Carlos_V-10012/index.php).
