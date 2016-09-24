@@ -52,9 +52,14 @@ Setup a [previous version](https://github.com/evgenyneu/Auk/wiki/Legacy-Swift-ve
 
 ## Usage
 
+
 The following example shows how to play an mp3 file with a fade in effect.
 
 ```Swift
+import AVFoundation
+import Cephalopod // For CocoaPods and Carthage
+// ---
+
 var playerInstance: AVAudioPlayer?
 var cephalopod: Cephalopod?
 
