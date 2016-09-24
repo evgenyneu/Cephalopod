@@ -10,7 +10,7 @@ open class Cephalopod: NSObject {
   
   // The higher the number - the higher the quality of fade
   // and it will consume more CPU.
-  var volumeAlterationsPerSecond = 30.0
+  open var volumeAlterationsPerSecond = 30.0
   
   private var fadeDurationSeconds = defaultFadeDurationSeconds
   private var fadeVelocity = defaultVelocity
