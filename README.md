@@ -104,6 +104,8 @@ cephalopod?.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { fin
 }
 ```
 
+**Arguments**:
+
 `fromVolume` - the start volume, a number between 0 and 1.
 
 `toVolume` - the end volume, a number between 0 and 1.
