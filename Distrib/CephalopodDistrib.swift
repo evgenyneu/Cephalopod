@@ -1,5 +1,5 @@
 //
-// a sound fader for AvAudioPlayer written in Swift for iOS, tvOS, macOS and watchOS.
+// A sound fader for AvAudioPlayer written in Swift for iOS, tvOS, macOS and watchOS.
 //
 // https://github.com/evgenyneu/Cephalopod
 //
