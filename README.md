@@ -10,7 +10,7 @@
 This library allows to fade sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
 
 
-<img src='https://raw.githubusercontent.com/evgenyneu/Auk/master/Graphics/Screenshots/auk_paged_image_scroller_ios.jpg' alt='Great Auks by John Gerrard Keulemans' width='382'>
+<img src='https://github.com/evgenyneu/Cephalopod/raw/master/graphics/cuttlefish.jpg' alt='Juvenile cuttlefish camouflaged against the seafloor' width='382'>
 
 *"Juvenile cuttlefish camouflaged against the seafloor". Photo taken by [Raul654](https://en.wikipedia.org/wiki/User:Raul654). Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Camouflage.jpg).*
 
