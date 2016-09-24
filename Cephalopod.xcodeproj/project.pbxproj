@@ -7,46 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EF4E23B1D95FED400D8D2DC /* Cephalopod.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF4E2391D95FED400D8D2DC /* Cephalopod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7EF4E2421D95FF2D00D8D2DC /* Cephalopod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2411D95FF2D00D8D2DC /* Cephalopod.swift */; };
-		7EF4E2441D95FF5100D8D2DC /* AutoCancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2431D95FF5100D8D2DC /* AutoCancellingTimer.swift */; };
-		7EF4E2531D95FFF000D8D2DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4E2521D95FFF000D8D2DC /* Assets.xcassets */; };
-		7EF4E25B1D96000100D8D2DC /* Cephalopod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF4E2361D95FED400D8D2DC /* Cephalopod.framework */; };
-		7EF4E25C1D96000100D8D2DC /* Cephalopod.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF4E2361D95FED400D8D2DC /* Cephalopod.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7EF4E2681D96002900D8D2DC /* ControlsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2611D96002900D8D2DC /* ControlsData.swift */; };
-		7EF4E2691D96002900D8D2DC /* ControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2621D96002900D8D2DC /* ControlType.swift */; };
-		7EF4E26A1D96002900D8D2DC /* SliderControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2631D96002900D8D2DC /* SliderControls.swift */; };
-		7EF4E26B1D96002900D8D2DC /* SliderControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2641D96002900D8D2DC /* SliderControllerDelegate.swift */; };
-		7EF4E26C1D96002900D8D2DC /* SliderControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2651D96002900D8D2DC /* SliderControllerView.swift */; };
-		7EF4E26D1D96002900D8D2DC /* SliderDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2661D96002900D8D2DC /* SliderDefaults.swift */; };
-		7EF4E26E1D96002900D8D2DC /* SliderControlUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2671D96002900D8D2DC /* SliderControlUserDefaults.swift */; };
-		7EF4E2711D96004900D8D2DC /* squid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4E2701D96004900D8D2DC /* squid.mp3 */; };
-		7EF4E2741D96005C00D8D2DC /* iiLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2731D96005C00D8D2DC /* iiLayout.swift */; };
-		7EF4E27A1D96006B00D8D2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2751D96006B00D8D2DC /* AppDelegate.swift */; };
-		7EF4E27B1D96006B00D8D2DC /* ControlsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2761D96006B00D8D2DC /* ControlsStorage.swift */; };
-		7EF4E27C1D96006B00D8D2DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4E2771D96006B00D8D2DC /* ViewController.swift */; };
-		7EF4E27D1D96006B00D8D2DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4E2781D96006B00D8D2DC /* Main.storyboard */; };
-		7EF4E27E1D96006B00D8D2DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4E2791D96006B00D8D2DC /* LaunchScreen.xib */; };
+		7E5029741D962C1A008140D9 /* Cephalopod.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5029721D962C1A008140D9 /* Cephalopod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E50297C1D962C63008140D9 /* Cephalopod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297A1D962C63008140D9 /* Cephalopod.swift */; };
+		7E50297D1D962C63008140D9 /* AutoCancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */; };
+		7E50298C1D962C78008140D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E50298B1D962C78008140D9 /* Assets.xcassets */; };
+		7E5029941D962C8F008140D9 /* Cephalopod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E50296F1D962C1A008140D9 /* Cephalopod.framework */; };
+		7E5029951D962C8F008140D9 /* Cephalopod.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E50296F1D962C1A008140D9 /* Cephalopod.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E5029A11D962CB8008140D9 /* ControlsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50299A1D962CB8008140D9 /* ControlsData.swift */; };
+		7E5029A21D962CB8008140D9 /* ControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50299B1D962CB8008140D9 /* ControlType.swift */; };
+		7E5029A31D962CB8008140D9 /* SliderControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50299C1D962CB8008140D9 /* SliderControls.swift */; };
+		7E5029A41D962CB8008140D9 /* SliderControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50299D1D962CB8008140D9 /* SliderControllerDelegate.swift */; };
+		7E5029A51D962CB8008140D9 /* SliderControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50299E1D962CB8008140D9 /* SliderControllerView.swift */; };
+		7E5029A61D962CB8008140D9 /* SliderDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50299F1D962CB8008140D9 /* SliderDefaults.swift */; };
+		7E5029A71D962CB8008140D9 /* SliderControlUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029A01D962CB8008140D9 /* SliderControlUserDefaults.swift */; };
+		7E5029AA1D962CCC008140D9 /* squid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E5029A91D962CCC008140D9 /* squid.mp3 */; };
+		7E5029AD1D962CE1008140D9 /* iiLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029AC1D962CE1008140D9 /* iiLayout.swift */; };
+		7E5029B31D962CEB008140D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029AE1D962CEB008140D9 /* AppDelegate.swift */; };
+		7E5029B41D962CEB008140D9 /* ControlsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029AF1D962CEB008140D9 /* ControlsStorage.swift */; };
+		7E5029B51D962CEB008140D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029B01D962CEB008140D9 /* ViewController.swift */; };
+		7E5029B61D962CEB008140D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5029B11D962CEB008140D9 /* Main.storyboard */; };
+		7E5029B71D962CEB008140D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5029B21D962CEB008140D9 /* LaunchScreen.xib */; };
+		7E5029BE1D962DA2008140D9 /* CephalopodDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029BD1D962DA2008140D9 /* CephalopodDistrib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7EF4E25D1D96000100D8D2DC /* PBXContainerItemProxy */ = {
+		7E5029961D962C90008140D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7EF4E22D1D95FED400D8D2DC /* Project object */;
+			containerPortal = 7E5029661D962C1A008140D9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7EF4E2351D95FED400D8D2DC;
+			remoteGlobalIDString = 7E50296E1D962C1A008140D9;
 			remoteInfo = Cephalopod;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7EF4E25F1D96000100D8D2DC /* Embed Frameworks */ = {
+		7E5029981D962C90008140D9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7EF4E25C1D96000100D8D2DC /* Cephalopod.framework in Embed Frameworks */,
+				7E5029951D962C8F008140D9 /* Cephalopod.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,153 +55,153 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E33CD3B1D96124E0091F7C2 /* CephalopodDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CephalopodDistrib.swift; sourceTree = "<group>"; };
-		7EF4E2361D95FED400D8D2DC /* Cephalopod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cephalopod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EF4E2391D95FED400D8D2DC /* Cephalopod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cephalopod.h; sourceTree = "<group>"; };
-		7EF4E23A1D95FED400D8D2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EF4E2411D95FF2D00D8D2DC /* Cephalopod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cephalopod.swift; sourceTree = "<group>"; };
-		7EF4E2431D95FF5100D8D2DC /* AutoCancellingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCancellingTimer.swift; sourceTree = "<group>"; };
-		7EF4E2491D95FFF000D8D2DC /* Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EF4E2521D95FFF000D8D2DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7EF4E2571D95FFF000D8D2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EF4E2611D96002900D8D2DC /* ControlsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsData.swift; sourceTree = "<group>"; };
-		7EF4E2621D96002900D8D2DC /* ControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlType.swift; sourceTree = "<group>"; };
-		7EF4E2631D96002900D8D2DC /* SliderControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControls.swift; sourceTree = "<group>"; };
-		7EF4E2641D96002900D8D2DC /* SliderControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerDelegate.swift; sourceTree = "<group>"; };
-		7EF4E2651D96002900D8D2DC /* SliderControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerView.swift; sourceTree = "<group>"; };
-		7EF4E2661D96002900D8D2DC /* SliderDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDefaults.swift; sourceTree = "<group>"; };
-		7EF4E2671D96002900D8D2DC /* SliderControlUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControlUserDefaults.swift; sourceTree = "<group>"; };
-		7EF4E2701D96004900D8D2DC /* squid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squid.mp3; sourceTree = "<group>"; };
-		7EF4E2731D96005C00D8D2DC /* iiLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiLayout.swift; sourceTree = "<group>"; };
-		7EF4E2751D96006B00D8D2DC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EF4E2761D96006B00D8D2DC /* ControlsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsStorage.swift; sourceTree = "<group>"; };
-		7EF4E2771D96006B00D8D2DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7EF4E2781D96006B00D8D2DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7EF4E2791D96006B00D8D2DC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		7E50296F1D962C1A008140D9 /* Cephalopod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cephalopod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5029721D962C1A008140D9 /* Cephalopod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cephalopod.h; sourceTree = "<group>"; };
+		7E5029731D962C1A008140D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E50297A1D962C63008140D9 /* Cephalopod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cephalopod.swift; sourceTree = "<group>"; };
+		7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCancellingTimer.swift; sourceTree = "<group>"; };
+		7E5029821D962C78008140D9 /* Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E50298B1D962C78008140D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E5029901D962C78008140D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E50299A1D962CB8008140D9 /* ControlsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsData.swift; sourceTree = "<group>"; };
+		7E50299B1D962CB8008140D9 /* ControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlType.swift; sourceTree = "<group>"; };
+		7E50299C1D962CB8008140D9 /* SliderControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControls.swift; sourceTree = "<group>"; };
+		7E50299D1D962CB8008140D9 /* SliderControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerDelegate.swift; sourceTree = "<group>"; };
+		7E50299E1D962CB8008140D9 /* SliderControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControllerView.swift; sourceTree = "<group>"; };
+		7E50299F1D962CB8008140D9 /* SliderDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDefaults.swift; sourceTree = "<group>"; };
+		7E5029A01D962CB8008140D9 /* SliderControlUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControlUserDefaults.swift; sourceTree = "<group>"; };
+		7E5029A91D962CCC008140D9 /* squid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squid.mp3; sourceTree = "<group>"; };
+		7E5029AC1D962CE1008140D9 /* iiLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiLayout.swift; sourceTree = "<group>"; };
+		7E5029AE1D962CEB008140D9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E5029AF1D962CEB008140D9 /* ControlsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsStorage.swift; sourceTree = "<group>"; };
+		7E5029B01D962CEB008140D9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E5029B11D962CEB008140D9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7E5029B21D962CEB008140D9 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		7E5029BD1D962DA2008140D9 /* CephalopodDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CephalopodDistrib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7EF4E2321D95FED400D8D2DC /* Frameworks */ = {
+		7E50296B1D962C1A008140D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EF4E2461D95FFF000D8D2DC /* Frameworks */ = {
+		7E50297F1D962C78008140D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF4E25B1D96000100D8D2DC /* Cephalopod.framework in Frameworks */,
+				7E5029941D962C8F008140D9 /* Cephalopod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E33CD3A1D9611F50091F7C2 /* Distrib */ = {
+		7E5029651D962C1A008140D9 = {
 			isa = PBXGroup;
 			children = (
-				7E33CD3B1D96124E0091F7C2 /* CephalopodDistrib.swift */,
-			);
-			path = Distrib;
-			sourceTree = "<group>";
-		};
-		7EF4E22C1D95FED400D8D2DC = {
-			isa = PBXGroup;
-			children = (
-				7EF4E2381D95FED400D8D2DC /* Cephalopod */,
-				7EF4E24A1D95FFF000D8D2DC /* Demo-iOS */,
-				7E33CD3A1D9611F50091F7C2 /* Distrib */,
-				7EF4E2371D95FED400D8D2DC /* Products */,
+				7E5029711D962C1A008140D9 /* Cephalopod */,
+				7E5029831D962C78008140D9 /* Demo-iOS */,
+				7E5029B81D962D19008140D9 /* Distrib */,
+				7E5029701D962C1A008140D9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7EF4E2371D95FED400D8D2DC /* Products */ = {
+		7E5029701D962C1A008140D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2361D95FED400D8D2DC /* Cephalopod.framework */,
-				7EF4E2491D95FFF000D8D2DC /* Demo-iOS.app */,
+				7E50296F1D962C1A008140D9 /* Cephalopod.framework */,
+				7E5029821D962C78008140D9 /* Demo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7EF4E2381D95FED400D8D2DC /* Cephalopod */ = {
+		7E5029711D962C1A008140D9 /* Cephalopod */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2391D95FED400D8D2DC /* Cephalopod.h */,
-				7EF4E23A1D95FED400D8D2DC /* Info.plist */,
-				7EF4E2411D95FF2D00D8D2DC /* Cephalopod.swift */,
-				7EF4E2431D95FF5100D8D2DC /* AutoCancellingTimer.swift */,
+				7E50297A1D962C63008140D9 /* Cephalopod.swift */,
+				7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */,
+				7E5029721D962C1A008140D9 /* Cephalopod.h */,
+				7E5029731D962C1A008140D9 /* Info.plist */,
 			);
 			path = Cephalopod;
 			sourceTree = "<group>";
 		};
-		7EF4E24A1D95FFF000D8D2DC /* Demo-iOS */ = {
+		7E5029831D962C78008140D9 /* Demo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2601D96002100D8D2DC /* Slider */,
-				7EF4E26F1D96003E00D8D2DC /* Sounds */,
-				7EF4E2721D96005300D8D2DC /* Utils */,
-				7EF4E2751D96006B00D8D2DC /* AppDelegate.swift */,
-				7EF4E2761D96006B00D8D2DC /* ControlsStorage.swift */,
-				7EF4E2771D96006B00D8D2DC /* ViewController.swift */,
-				7EF4E2781D96006B00D8D2DC /* Main.storyboard */,
-				7EF4E2791D96006B00D8D2DC /* LaunchScreen.xib */,
-				7EF4E2521D95FFF000D8D2DC /* Assets.xcassets */,
-				7EF4E2571D95FFF000D8D2DC /* Info.plist */,
+				7E5029991D962CB2008140D9 /* Slider */,
+				7E5029A81D962CC2008140D9 /* Sounds */,
+				7E5029AB1D962CD5008140D9 /* Utils */,
+				7E5029AE1D962CEB008140D9 /* AppDelegate.swift */,
+				7E5029AF1D962CEB008140D9 /* ControlsStorage.swift */,
+				7E5029B01D962CEB008140D9 /* ViewController.swift */,
+				7E5029B11D962CEB008140D9 /* Main.storyboard */,
+				7E5029B21D962CEB008140D9 /* LaunchScreen.xib */,
+				7E50298B1D962C78008140D9 /* Assets.xcassets */,
+				7E5029901D962C78008140D9 /* Info.plist */,
 			);
 			path = "Demo-iOS";
 			sourceTree = "<group>";
 		};
-		7EF4E2601D96002100D8D2DC /* Slider */ = {
+		7E5029991D962CB2008140D9 /* Slider */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2611D96002900D8D2DC /* ControlsData.swift */,
-				7EF4E2621D96002900D8D2DC /* ControlType.swift */,
-				7EF4E2631D96002900D8D2DC /* SliderControls.swift */,
-				7EF4E2641D96002900D8D2DC /* SliderControllerDelegate.swift */,
-				7EF4E2651D96002900D8D2DC /* SliderControllerView.swift */,
-				7EF4E2661D96002900D8D2DC /* SliderDefaults.swift */,
-				7EF4E2671D96002900D8D2DC /* SliderControlUserDefaults.swift */,
+				7E50299A1D962CB8008140D9 /* ControlsData.swift */,
+				7E50299B1D962CB8008140D9 /* ControlType.swift */,
+				7E50299C1D962CB8008140D9 /* SliderControls.swift */,
+				7E50299D1D962CB8008140D9 /* SliderControllerDelegate.swift */,
+				7E50299E1D962CB8008140D9 /* SliderControllerView.swift */,
+				7E50299F1D962CB8008140D9 /* SliderDefaults.swift */,
+				7E5029A01D962CB8008140D9 /* SliderControlUserDefaults.swift */,
 			);
 			path = Slider;
 			sourceTree = "<group>";
 		};
-		7EF4E26F1D96003E00D8D2DC /* Sounds */ = {
+		7E5029A81D962CC2008140D9 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2701D96004900D8D2DC /* squid.mp3 */,
+				7E5029A91D962CCC008140D9 /* squid.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		7EF4E2721D96005300D8D2DC /* Utils */ = {
+		7E5029AB1D962CD5008140D9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7EF4E2731D96005C00D8D2DC /* iiLayout.swift */,
+				7E5029AC1D962CE1008140D9 /* iiLayout.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		7E5029B81D962D19008140D9 /* Distrib */ = {
+			isa = PBXGroup;
+			children = (
+				7E5029BD1D962DA2008140D9 /* CephalopodDistrib.swift */,
+			);
+			path = Distrib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7EF4E2331D95FED400D8D2DC /* Headers */ = {
+		7E50296C1D962C1A008140D9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF4E23B1D95FED400D8D2DC /* Cephalopod.h in Headers */,
+				7E5029741D962C1A008140D9 /* Cephalopod.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
-		7E33CD361D960DF50091F7C2 /* ConcatenateSwiftFiles */ = {
+		7E5029B91D962D5B008140D9 /* ConcatenateSwiftFiles */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$PROJECT_DIR/Cephalopod $PROJECT_DIR/Distrib/CephalopodDistrib.swift \"//\n// A sound fader for AvAudioPlayer written in Swift for iOS, tvOS, macOS and watchOS.\n//\n// https://github.com/evgenyneu/Cephalopod\n//\n// This file was automatically generated by combining multiple Swift source files.\n//\"";
-			buildConfigurationList = 7E33CD391D960DF50091F7C2 /* Build configuration list for PBXLegacyTarget "ConcatenateSwiftFiles" */;
+			buildConfigurationList = 7E5029BA1D962D5B008140D9 /* Build configuration list for PBXLegacyTarget "ConcatenateSwiftFiles" */;
 			buildPhases = (
 			);
 			buildToolPath = $PROJECT_DIR/scripts/concatenate_swift_files.sh;
@@ -214,14 +215,14 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		7EF4E2351D95FED400D8D2DC /* Cephalopod */ = {
+		7E50296E1D962C1A008140D9 /* Cephalopod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EF4E23E1D95FED400D8D2DC /* Build configuration list for PBXNativeTarget "Cephalopod" */;
+			buildConfigurationList = 7E5029771D962C1A008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod" */;
 			buildPhases = (
-				7EF4E2311D95FED400D8D2DC /* Sources */,
-				7EF4E2321D95FED400D8D2DC /* Frameworks */,
-				7EF4E2331D95FED400D8D2DC /* Headers */,
-				7EF4E2341D95FED400D8D2DC /* Resources */,
+				7E50296A1D962C1A008140D9 /* Sources */,
+				7E50296B1D962C1A008140D9 /* Frameworks */,
+				7E50296C1D962C1A008140D9 /* Headers */,
+				7E50296D1D962C1A008140D9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -229,55 +230,57 @@
 			);
 			name = Cephalopod;
 			productName = Cephalopod;
-			productReference = 7EF4E2361D95FED400D8D2DC /* Cephalopod.framework */;
+			productReference = 7E50296F1D962C1A008140D9 /* Cephalopod.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7EF4E2481D95FFF000D8D2DC /* Demo-iOS */ = {
+		7E5029811D962C78008140D9 /* Demo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EF4E2581D95FFF000D8D2DC /* Build configuration list for PBXNativeTarget "Demo-iOS" */;
+			buildConfigurationList = 7E5029911D962C78008140D9 /* Build configuration list for PBXNativeTarget "Demo-iOS" */;
 			buildPhases = (
-				7EF4E2451D95FFF000D8D2DC /* Sources */,
-				7EF4E2461D95FFF000D8D2DC /* Frameworks */,
-				7EF4E2471D95FFF000D8D2DC /* Resources */,
-				7EF4E25F1D96000100D8D2DC /* Embed Frameworks */,
+				7E50297E1D962C78008140D9 /* Sources */,
+				7E50297F1D962C78008140D9 /* Frameworks */,
+				7E5029801D962C78008140D9 /* Resources */,
+				7E5029981D962C90008140D9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7EF4E25E1D96000100D8D2DC /* PBXTargetDependency */,
+				7E5029971D962C90008140D9 /* PBXTargetDependency */,
 			);
 			name = "Demo-iOS";
 			productName = "Demo-iOS";
-			productReference = 7EF4E2491D95FFF000D8D2DC /* Demo-iOS.app */;
+			productReference = 7E5029821D962C78008140D9 /* Demo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7EF4E22D1D95FED400D8D2DC /* Project object */ = {
+		7E5029661D962C1A008140D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Evgenii Neumerzhitckii";
 				TargetAttributes = {
-					7E33CD361D960DF50091F7C2 = {
+					7E50296E1D962C1A008140D9 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BS677JRE62;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
+					};
+					7E5029811D962C78008140D9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BS677JRE62;
 						ProvisioningStyle = Automatic;
 					};
-					7EF4E2351D95FED400D8D2DC = {
+					7E5029B91D962D5B008140D9 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
-					};
-					7EF4E2481D95FFF000D8D2DC = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = BS677JRE62;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 7EF4E2301D95FED400D8D2DC /* Build configuration list for PBXProject "Cephalopod" */;
+			buildConfigurationList = 7E5029691D962C1A008140D9 /* Build configuration list for PBXProject "Cephalopod" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -285,104 +288,80 @@
 				en,
 				Base,
 			);
-			mainGroup = 7EF4E22C1D95FED400D8D2DC;
-			productRefGroup = 7EF4E2371D95FED400D8D2DC /* Products */;
+			mainGroup = 7E5029651D962C1A008140D9;
+			productRefGroup = 7E5029701D962C1A008140D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7EF4E2351D95FED400D8D2DC /* Cephalopod */,
-				7EF4E2481D95FFF000D8D2DC /* Demo-iOS */,
-				7E33CD361D960DF50091F7C2 /* ConcatenateSwiftFiles */,
+				7E50296E1D962C1A008140D9 /* Cephalopod */,
+				7E5029811D962C78008140D9 /* Demo-iOS */,
+				7E5029B91D962D5B008140D9 /* ConcatenateSwiftFiles */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7EF4E2341D95FED400D8D2DC /* Resources */ = {
+		7E50296D1D962C1A008140D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EF4E2471D95FFF000D8D2DC /* Resources */ = {
+		7E5029801D962C78008140D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF4E27E1D96006B00D8D2DC /* LaunchScreen.xib in Resources */,
-				7EF4E27D1D96006B00D8D2DC /* Main.storyboard in Resources */,
-				7EF4E2531D95FFF000D8D2DC /* Assets.xcassets in Resources */,
-				7EF4E2711D96004900D8D2DC /* squid.mp3 in Resources */,
+				7E5029B71D962CEB008140D9 /* LaunchScreen.xib in Resources */,
+				7E5029B61D962CEB008140D9 /* Main.storyboard in Resources */,
+				7E50298C1D962C78008140D9 /* Assets.xcassets in Resources */,
+				7E5029AA1D962CCC008140D9 /* squid.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7EF4E2311D95FED400D8D2DC /* Sources */ = {
+		7E50296A1D962C1A008140D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF4E2441D95FF5100D8D2DC /* AutoCancellingTimer.swift in Sources */,
-				7EF4E2421D95FF2D00D8D2DC /* Cephalopod.swift in Sources */,
+				7E50297D1D962C63008140D9 /* AutoCancellingTimer.swift in Sources */,
+				7E50297C1D962C63008140D9 /* Cephalopod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EF4E2451D95FFF000D8D2DC /* Sources */ = {
+		7E50297E1D962C78008140D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF4E2681D96002900D8D2DC /* ControlsData.swift in Sources */,
-				7EF4E26E1D96002900D8D2DC /* SliderControlUserDefaults.swift in Sources */,
-				7EF4E26D1D96002900D8D2DC /* SliderDefaults.swift in Sources */,
-				7EF4E27A1D96006B00D8D2DC /* AppDelegate.swift in Sources */,
-				7EF4E27C1D96006B00D8D2DC /* ViewController.swift in Sources */,
-				7EF4E2741D96005C00D8D2DC /* iiLayout.swift in Sources */,
-				7EF4E26C1D96002900D8D2DC /* SliderControllerView.swift in Sources */,
-				7EF4E26B1D96002900D8D2DC /* SliderControllerDelegate.swift in Sources */,
-				7EF4E26A1D96002900D8D2DC /* SliderControls.swift in Sources */,
-				7EF4E2691D96002900D8D2DC /* ControlType.swift in Sources */,
-				7EF4E27B1D96006B00D8D2DC /* ControlsStorage.swift in Sources */,
+				7E5029A71D962CB8008140D9 /* SliderControlUserDefaults.swift in Sources */,
+				7E5029AD1D962CE1008140D9 /* iiLayout.swift in Sources */,
+				7E5029A61D962CB8008140D9 /* SliderDefaults.swift in Sources */,
+				7E5029B31D962CEB008140D9 /* AppDelegate.swift in Sources */,
+				7E5029B51D962CEB008140D9 /* ViewController.swift in Sources */,
+				7E5029A11D962CB8008140D9 /* ControlsData.swift in Sources */,
+				7E5029A31D962CB8008140D9 /* SliderControls.swift in Sources */,
+				7E5029A51D962CB8008140D9 /* SliderControllerView.swift in Sources */,
+				7E5029A21D962CB8008140D9 /* ControlType.swift in Sources */,
+				7E5029A41D962CB8008140D9 /* SliderControllerDelegate.swift in Sources */,
+				7E5029BE1D962DA2008140D9 /* CephalopodDistrib.swift in Sources */,
+				7E5029B41D962CEB008140D9 /* ControlsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7EF4E25E1D96000100D8D2DC /* PBXTargetDependency */ = {
+		7E5029971D962C90008140D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7EF4E2351D95FED400D8D2DC /* Cephalopod */;
-			targetProxy = 7EF4E25D1D96000100D8D2DC /* PBXContainerItemProxy */;
+			target = 7E50296E1D962C1A008140D9 /* Cephalopod */;
+			targetProxy = 7E5029961D962C90008140D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7E33CD371D960DF50091F7C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUGGING_SYMBOLS = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = BS677JRE62;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7E33CD381D960DF50091F7C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = BS677JRE62;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		7EF4E23C1D95FED400D8D2DC /* Debug */ = {
+		7E5029751D962C1A008140D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -435,7 +414,7 @@
 			};
 			name = Debug;
 		};
-		7EF4E23D1D95FED400D8D2DC /* Release */ = {
+		7E5029761D962C1A008140D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -481,13 +460,13 @@
 			};
 			name = Release;
 		};
-		7EF4E23F1D95FED400D8D2DC /* Debug */ = {
+		7E5029781D962C1A008140D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BS677JRE62;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -502,13 +481,13 @@
 			};
 			name = Debug;
 		};
-		7EF4E2401D95FED400D8D2DC /* Release */ = {
+		7E5029791D962C1A008140D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BS677JRE62;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -522,14 +501,14 @@
 			};
 			name = Release;
 		};
-		7EF4E2591D95FFF000D8D2DC /* Debug */ = {
+		7E5029921D962C78008140D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BS677JRE62;
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,14 +516,14 @@
 			};
 			name = Debug;
 		};
-		7EF4E25A1D95FFF000D8D2DC /* Release */ = {
+		7E5029931D962C78008140D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BS677JRE62;
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,46 +531,68 @@
 			};
 			name = Release;
 		};
+		7E5029BB1D962D5B008140D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BS677JRE62;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E5029BC1D962D5B008140D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BS677JRE62;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7E33CD391D960DF50091F7C2 /* Build configuration list for PBXLegacyTarget "ConcatenateSwiftFiles" */ = {
+		7E5029691D962C1A008140D9 /* Build configuration list for PBXProject "Cephalopod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E33CD371D960DF50091F7C2 /* Debug */,
-				7E33CD381D960DF50091F7C2 /* Release */,
+				7E5029751D962C1A008140D9 /* Debug */,
+				7E5029761D962C1A008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EF4E2301D95FED400D8D2DC /* Build configuration list for PBXProject "Cephalopod" */ = {
+		7E5029771D962C1A008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EF4E23C1D95FED400D8D2DC /* Debug */,
-				7EF4E23D1D95FED400D8D2DC /* Release */,
+				7E5029781D962C1A008140D9 /* Debug */,
+				7E5029791D962C1A008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		7EF4E23E1D95FED400D8D2DC /* Build configuration list for PBXNativeTarget "Cephalopod" */ = {
+		7E5029911D962C78008140D9 /* Build configuration list for PBXNativeTarget "Demo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EF4E23F1D95FED400D8D2DC /* Debug */,
-				7EF4E2401D95FED400D8D2DC /* Release */,
+				7E5029921D962C78008140D9 /* Debug */,
+				7E5029931D962C78008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		7EF4E2581D95FFF000D8D2DC /* Build configuration list for PBXNativeTarget "Demo-iOS" */ = {
+		7E5029BA1D962D5B008140D9 /* Build configuration list for PBXLegacyTarget "ConcatenateSwiftFiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EF4E2591D95FFF000D8D2DC /* Debug */,
-				7EF4E25A1D95FFF000D8D2DC /* Release */,
+				7E5029BB1D962D5B008140D9 /* Debug */,
+				7E5029BC1D962D5B008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7EF4E22D1D95FED400D8D2DC /* Project object */;
+	rootObject = 7E5029661D962C1A008140D9 /* Project object */;
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7EF4E2351D95FED400D8D2DC"
+               BlueprintIdentifier = "7E50296E1D962C1A008140D9"
                BuildableName = "Cephalopod.framework"
                BlueprintName = "Cephalopod"
                ReferencedContainer = "container:Cephalopod.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E33CD361D960DF50091F7C2"
+               BlueprintIdentifier = "7E5029B91D962D5B008140D9"
                BuildableName = "ConcatenateSwiftFiles"
                BlueprintName = "ConcatenateSwiftFiles"
                ReferencedContainer = "container:Cephalopod.xcodeproj">
@@ -46,7 +46,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7EF4E2351D95FED400D8D2DC"
+            BlueprintIdentifier = "7E50296E1D962C1A008140D9"
             BuildableName = "Cephalopod.framework"
             BlueprintName = "Cephalopod"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
@@ -68,7 +68,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7EF4E2351D95FED400D8D2DC"
+            BlueprintIdentifier = "7E50296E1D962C1A008140D9"
             BuildableName = "Cephalopod.framework"
             BlueprintName = "Cephalopod"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
@@ -86,7 +86,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7EF4E2351D95FED400D8D2DC"
+            BlueprintIdentifier = "7E50296E1D962C1A008140D9"
             BuildableName = "Cephalopod.framework"
             BlueprintName = "Cephalopod"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
