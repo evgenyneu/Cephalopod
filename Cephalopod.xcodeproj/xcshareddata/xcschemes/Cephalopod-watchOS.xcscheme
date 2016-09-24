@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E33CDA91D9625F50091F7C2"
-               BuildableName = "Cephalopod.framework"
-               BlueprintName = "Cephalopod-tvOS"
+               BlueprintIdentifier = "7E33CDB81D96261F0091F7C2"
+               BuildableName = "Cephalopod-watchOS.framework"
+               BlueprintName = "Cephalopod-watchOS"
                ReferencedContainer = "container:Cephalopod.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E33CDA91D9625F50091F7C2"
-            BuildableName = "Cephalopod.framework"
-            BlueprintName = "Cephalopod-tvOS"
+            BlueprintIdentifier = "7E33CDB81D96261F0091F7C2"
+            BuildableName = "Cephalopod-watchOS.framework"
+            BlueprintName = "Cephalopod-watchOS"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E33CDA91D9625F50091F7C2"
-            BuildableName = "Cephalopod.framework"
-            BlueprintName = "Cephalopod-tvOS"
+            BlueprintIdentifier = "7E33CDB81D96261F0091F7C2"
+            BuildableName = "Cephalopod-watchOS.framework"
+            BlueprintName = "Cephalopod-watchOS"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
