@@ -1,10 +1,10 @@
 # Cephalopod, a sound fader for AvAudioPlayer written in Swift - iOS, tvOS, macOS and watchOS
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
-[![CocoaPods Version](https://img.shields.io/cocoapods/v/Auk.svg?style=flat)][cocoadocs]
-[![License](https://img.shields.io/cocoapods/l/Auk.svg?style=flat)](LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/Auk.svg?style=flat)][cocoadocs]
-[cocoadocs]: http://cocoadocs.org/docsets/Auk
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/Cephalopod.svg?style=flat)][cocoadocs]
+[![License](https://img.shields.io/cocoapods/l/Cephalopod.svg?style=flat)](LICENSE)
+[![Platform](https://img.shields.io/cocoapods/p/Cephalopod.svg?style=flat)][cocoadocs]
+[cocoadocs]: http://cocoadocs.org/docsets/Cephalopod
 [carthage]: https://github.com/Carthage/Carthage
 
 This library can help fading sounds in and out with AvAudioPlayer. One can set duration and velocity of the fade. Velocity can vary from linear to logarithmic.
@@ -17,7 +17,7 @@ This library can help fading sounds in and out with AvAudioPlayer. One can set d
 
 ## Setup (Swift 3.0 / Xcode 8)
 
-There are three ways you can add Auk to your Xcode project.
+There are three ways you can add Cephalopod to your Xcode project.
 
 #### Add source (iOS 7+)
 
