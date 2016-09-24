@@ -123,7 +123,7 @@ cephalopod?.fade(fromVolume: 0.3, toVolume: 0.7, duration: 3, velocity: 2) { fin
 cephalopod?.volumeAlterationsPerSecond = 20
 ```
 
-Larger numbers will produce finer fade effect at expense of CPU juice.
+Larger numbers will produce finer fade effect at expense of CPU juice. Default value: `30`.
 
 ## Volume functions
 
