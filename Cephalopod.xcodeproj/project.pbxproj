@@ -28,6 +28,12 @@
 		7E5029B61D962CEB008140D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5029B11D962CEB008140D9 /* Main.storyboard */; };
 		7E5029B71D962CEB008140D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5029B21D962CEB008140D9 /* LaunchScreen.xib */; };
 		7E5029BE1D962DA2008140D9 /* CephalopodDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5029BD1D962DA2008140D9 /* CephalopodDistrib.swift */; };
+		7E5029C81D962E49008140D9 /* Cephalopod-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5029C61D962E49008140D9 /* Cephalopod-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E5029D51D962E64008140D9 /* Cephalopod-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5029D31D962E64008140D9 /* Cephalopod-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E5029E61D962E81008140D9 /* Cephalopod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297A1D962C63008140D9 /* Cephalopod.swift */; };
+		7E5029E71D962E81008140D9 /* AutoCancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */; };
+		7E5029E81D962E81008140D9 /* Cephalopod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297A1D962C63008140D9 /* Cephalopod.swift */; };
+		7E5029E91D962E81008140D9 /* AutoCancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,12 @@
 		7E5029B11D962CEB008140D9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7E5029B21D962CEB008140D9 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		7E5029BD1D962DA2008140D9 /* CephalopodDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CephalopodDistrib.swift; sourceTree = "<group>"; };
+		7E5029C41D962E49008140D9 /* Cephalopod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cephalopod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5029C61D962E49008140D9 /* Cephalopod-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cephalopod-macOS.h"; sourceTree = "<group>"; };
+		7E5029C71D962E49008140D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E5029D11D962E64008140D9 /* Cephalopod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cephalopod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5029D31D962E64008140D9 /* Cephalopod-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cephalopod-tvOS.h"; sourceTree = "<group>"; };
+		7E5029D41D962E64008140D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E5029C01D962E49008140D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029CD1D962E64008140D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,6 +131,8 @@
 				7E5029711D962C1A008140D9 /* Cephalopod */,
 				7E5029831D962C78008140D9 /* Demo-iOS */,
 				7E5029B81D962D19008140D9 /* Distrib */,
+				7E5029C51D962E49008140D9 /* Cephalopod-macOS */,
+				7E5029D21D962E64008140D9 /* Cephalopod-tvOS */,
 				7E5029701D962C1A008140D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,6 +142,8 @@
 			children = (
 				7E50296F1D962C1A008140D9 /* Cephalopod.framework */,
 				7E5029821D962C78008140D9 /* Demo-iOS.app */,
+				7E5029C41D962E49008140D9 /* Cephalopod.framework */,
+				7E5029D11D962E64008140D9 /* Cephalopod.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +214,24 @@
 			path = Distrib;
 			sourceTree = "<group>";
 		};
+		7E5029C51D962E49008140D9 /* Cephalopod-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E5029C61D962E49008140D9 /* Cephalopod-macOS.h */,
+				7E5029C71D962E49008140D9 /* Info.plist */,
+			);
+			path = "Cephalopod-macOS";
+			sourceTree = "<group>";
+		};
+		7E5029D21D962E64008140D9 /* Cephalopod-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E5029D31D962E64008140D9 /* Cephalopod-tvOS.h */,
+				7E5029D41D962E64008140D9 /* Info.plist */,
+			);
+			path = "Cephalopod-tvOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -192,6 +240,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5029741D962C1A008140D9 /* Cephalopod.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029C11D962E49008140D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5029C81D962E49008140D9 /* Cephalopod-macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029CE1D962E64008140D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5029D51D962E64008140D9 /* Cephalopod-tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +316,42 @@
 			productReference = 7E5029821D962C78008140D9 /* Demo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7E5029C31D962E49008140D9 /* Cephalopod-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E5029C91D962E49008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod-macOS" */;
+			buildPhases = (
+				7E5029BF1D962E49008140D9 /* Sources */,
+				7E5029C01D962E49008140D9 /* Frameworks */,
+				7E5029C11D962E49008140D9 /* Headers */,
+				7E5029C21D962E49008140D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cephalopod-macOS";
+			productName = "Cephalopod-macOS";
+			productReference = 7E5029C41D962E49008140D9 /* Cephalopod.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E5029D01D962E64008140D9 /* Cephalopod-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E5029D61D962E64008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod-tvOS" */;
+			buildPhases = (
+				7E5029CC1D962E64008140D9 /* Sources */,
+				7E5029CD1D962E64008140D9 /* Frameworks */,
+				7E5029CE1D962E64008140D9 /* Headers */,
+				7E5029CF1D962E64008140D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cephalopod-tvOS";
+			productName = "Cephalopod-tvOS";
+			productReference = 7E5029D11D962E64008140D9 /* Cephalopod.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,6 +377,14 @@
 						DevelopmentTeam = BS677JRE62;
 						ProvisioningStyle = Automatic;
 					};
+					7E5029C31D962E49008140D9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+					7E5029D01D962E64008140D9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
 				};
 			};
 			buildConfigurationList = 7E5029691D962C1A008140D9 /* Build configuration list for PBXProject "Cephalopod" */;
@@ -293,6 +401,8 @@
 			projectRoot = "";
 			targets = (
 				7E50296E1D962C1A008140D9 /* Cephalopod */,
+				7E5029C31D962E49008140D9 /* Cephalopod-macOS */,
+				7E5029D01D962E64008140D9 /* Cephalopod-tvOS */,
 				7E5029811D962C78008140D9 /* Demo-iOS */,
 				7E5029B91D962D5B008140D9 /* ConcatenateSwiftFiles */,
 			);
@@ -315,6 +425,20 @@
 				7E5029B61D962CEB008140D9 /* Main.storyboard in Resources */,
 				7E50298C1D962C78008140D9 /* Assets.xcassets in Resources */,
 				7E5029AA1D962CCC008140D9 /* squid.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029C21D962E49008140D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029CF1D962E64008140D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +470,24 @@
 				7E5029A41D962CB8008140D9 /* SliderControllerDelegate.swift in Sources */,
 				7E5029BE1D962DA2008140D9 /* CephalopodDistrib.swift in Sources */,
 				7E5029B41D962CEB008140D9 /* ControlsStorage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029BF1D962E49008140D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5029E71D962E81008140D9 /* AutoCancellingTimer.swift in Sources */,
+				7E5029E61D962E81008140D9 /* Cephalopod.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5029CC1D962E64008140D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5029E91D962E81008140D9 /* AutoCancellingTimer.swift in Sources */,
+				7E5029E81D962E81008140D9 /* Cephalopod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +697,96 @@
 			};
 			name = Release;
 		};
+		7E5029CA1D962E49008140D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Cephalopod-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.Cephalopod-macOS";
+				PRODUCT_NAME = Cephalopod;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7E5029CB1D962E49008140D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Cephalopod-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.Cephalopod-macOS";
+				PRODUCT_NAME = Cephalopod;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7E5029D71D962E64008140D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Cephalopod-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.Cephalopod-tvOS";
+				PRODUCT_NAME = Cephalopod;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		7E5029D81D962E64008140D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Cephalopod-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.Cephalopod-tvOS";
+				PRODUCT_NAME = Cephalopod;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +825,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7E5029C91D962E49008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E5029CA1D962E49008140D9 /* Debug */,
+				7E5029CB1D962E49008140D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E5029D61D962E64008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E5029D71D962E64008140D9 /* Debug */,
+				7E5029D81D962E64008140D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
