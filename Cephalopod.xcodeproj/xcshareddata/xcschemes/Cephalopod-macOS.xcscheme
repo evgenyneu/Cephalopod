@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7E33CD9A1D96256F0091F7C2"
-               BuildableName = "Cephalopod-macOS.framework"
+               BuildableName = "Cephalopod.framework"
                BlueprintName = "Cephalopod-macOS"
                ReferencedContainer = "container:Cephalopod.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7E33CD9A1D96256F0091F7C2"
-            BuildableName = "Cephalopod-macOS.framework"
+            BuildableName = "Cephalopod.framework"
             BlueprintName = "Cephalopod-macOS"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7E33CD9A1D96256F0091F7C2"
-            BuildableName = "Cephalopod-macOS.framework"
+            BuildableName = "Cephalopod.framework"
             BlueprintName = "Cephalopod-macOS"
             ReferencedContainer = "container:Cephalopod.xcodeproj">
          </BuildableReference>
