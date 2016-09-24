@@ -47,7 +47,7 @@ Setup a [previous version](https://github.com/evgenyneu/Auk/wiki/Legacy-Swift-ve
 
 ## Usage
 
-### Play an audio file
+The following example shows how to play an mp3 file with fade in effect.
 
 ```Swift
 var playerInstance: AVAudioPlayer?
