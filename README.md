@@ -50,28 +50,38 @@ Setup a [previous version](https://github.com/evgenyneu/Auk/wiki/Legacy-Swift-ve
 ### Play an audio file
 
 ```Swift
-import AVFoundation
+var playerInstance: AVAudioPlayer?
+var cephalopod: Cephalopod?
 
-let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "my_lovely_horse.mp3", nil, nil)
-let player = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
-player.play()
-player.volume = 0
+override func viewDidLoad() {
+  super.viewDidLoad()
+
+  // Create player instance
+  guard let path = Bundle.main.path(forResource: "squid", ofType: "mp3") else { return }
+  guard let player = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path)) else { return }
+  playerInstance = player
+
+  // Start audio playback
+  player.play()
+  player.volume = 0
+
+  // Fade in the sound
+  cephalopod = Cephalopod(player: player)
+  cephalopod?.fadeIn()
+}
 ```
 
-### Instantiate a fader
+### Fade in / fade out
 
 ```Swift
-let fader = iiFaderForAvAudioPlayer(player: player)
-fader.fadeIn()
-fader.fadeOut()
+cephalopod?.fadeIn()
+cephalopod?.fadeOut()
 ```
-
-I would create a fader property somewhere in my app and keep a strong reference to the fader.
 
 ### Set fade duration and velocity
 
 ```Swift
-fader.fadeIn(duration: 3, velocity: 2)
+cephalopod?.fadeIn(duration: 3, velocity: 2)
 ```
 
 ### Supply fade start/end volume, completion callback
