@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E4B14941D964BD700E77CE4 /* CephalopodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4B14931D964BD700E77CE4 /* CephalopodTests.swift */; };
+		7E4B14961D964BD700E77CE4 /* Cephalopod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E50296F1D962C1A008140D9 /* Cephalopod.framework */; };
+		7E4B149E1D964CB900E77CE4 /* squid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B149D1D964CB900E77CE4 /* squid.mp3 */; };
+		7E4B14A11D964D2A00E77CE4 /* TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4B14A01D964D2A00E77CE4 /* TestBundle.swift */; };
 		7E5029741D962C1A008140D9 /* Cephalopod.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5029721D962C1A008140D9 /* Cephalopod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E50297C1D962C63008140D9 /* Cephalopod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297A1D962C63008140D9 /* Cephalopod.swift */; };
 		7E50297D1D962C63008140D9 /* AutoCancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50297B1D962C63008140D9 /* AutoCancellingTimer.swift */; };
@@ -37,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7E4B14971D964BD700E77CE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E5029661D962C1A008140D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E50296E1D962C1A008140D9;
+			remoteInfo = Cephalopod;
+		};
 		7E5029961D962C90008140D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7E5029661D962C1A008140D9 /* Project object */;
@@ -61,6 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E4B14911D964BD700E77CE4 /* CephalopodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CephalopodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4B14931D964BD700E77CE4 /* CephalopodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CephalopodTests.swift; sourceTree = "<group>"; };
+		7E4B14951D964BD700E77CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4B149D1D964CB900E77CE4 /* squid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squid.mp3; sourceTree = "<group>"; };
+		7E4B14A01D964D2A00E77CE4 /* TestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBundle.swift; sourceTree = "<group>"; };
 		7E50296F1D962C1A008140D9 /* Cephalopod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cephalopod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5029721D962C1A008140D9 /* Cephalopod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cephalopod.h; sourceTree = "<group>"; };
 		7E5029731D962C1A008140D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +109,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E4B148E1D964BD700E77CE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4B14961D964BD700E77CE4 /* Cephalopod.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E50296B1D962C1A008140D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,6 +149,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E4B14921D964BD700E77CE4 /* CephalopodTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E4B149F1D964D2400E77CE4 /* Helpers */,
+				7E4B149C1D964CA800E77CE4 /* sounds */,
+				7E4B14931D964BD700E77CE4 /* CephalopodTests.swift */,
+				7E4B14951D964BD700E77CE4 /* Info.plist */,
+			);
+			path = CephalopodTests;
+			sourceTree = "<group>";
+		};
+		7E4B149C1D964CA800E77CE4 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7E4B149D1D964CB900E77CE4 /* squid.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		7E4B149F1D964D2400E77CE4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E4B14A01D964D2A00E77CE4 /* TestBundle.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7E5029651D962C1A008140D9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +184,7 @@
 				7E5029B81D962D19008140D9 /* Distrib */,
 				7E5029C51D962E49008140D9 /* Cephalopod-macOS */,
 				7E5029D21D962E64008140D9 /* Cephalopod-tvOS */,
+				7E4B14921D964BD700E77CE4 /* CephalopodTests */,
 				7E5029701D962C1A008140D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +196,7 @@
 				7E5029821D962C78008140D9 /* Demo-iOS.app */,
 				7E5029C41D962E49008140D9 /* Cephalopod.framework */,
 				7E5029D11D962E64008140D9 /* Cephalopod.framework */,
+				7E4B14911D964BD700E77CE4 /* CephalopodTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +332,24 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		7E4B14901D964BD700E77CE4 /* CephalopodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E4B149B1D964BD700E77CE4 /* Build configuration list for PBXNativeTarget "CephalopodTests" */;
+			buildPhases = (
+				7E4B148D1D964BD700E77CE4 /* Sources */,
+				7E4B148E1D964BD700E77CE4 /* Frameworks */,
+				7E4B148F1D964BD700E77CE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E4B14981D964BD700E77CE4 /* PBXTargetDependency */,
+			);
+			name = CephalopodTests;
+			productName = CephalopodTests;
+			productReference = 7E4B14911D964BD700E77CE4 /* CephalopodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7E50296E1D962C1A008140D9 /* Cephalopod */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E5029771D962C1A008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod" */;
@@ -362,6 +433,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Evgenii Neumerzhitckii";
 				TargetAttributes = {
+					7E4B14901D964BD700E77CE4 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
 					7E50296E1D962C1A008140D9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BS677JRE62;
@@ -405,11 +480,20 @@
 				7E5029D01D962E64008140D9 /* Cephalopod-tvOS */,
 				7E5029811D962C78008140D9 /* Demo-iOS */,
 				7E5029B91D962D5B008140D9 /* ConcatenateSwiftFiles */,
+				7E4B14901D964BD700E77CE4 /* CephalopodTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7E4B148F1D964BD700E77CE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4B149E1D964CB900E77CE4 /* squid.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E50296D1D962C1A008140D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +529,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E4B148D1D964BD700E77CE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4B14941D964BD700E77CE4 /* CephalopodTests.swift in Sources */,
+				7E4B14A11D964D2A00E77CE4 /* TestBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E50296A1D962C1A008140D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +587,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7E4B14981D964BD700E77CE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E50296E1D962C1A008140D9 /* Cephalopod */;
+			targetProxy = 7E4B14971D964BD700E77CE4 /* PBXContainerItemProxy */;
+		};
 		7E5029971D962C90008140D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7E50296E1D962C1A008140D9 /* Cephalopod */;
@@ -502,6 +600,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7E4B14991D964BD700E77CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CephalopodTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.evgenii.CephalopodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7E4B149A1D964BD700E77CE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CephalopodTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.evgenii.CephalopodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		7E5029751D962C1A008140D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -790,6 +914,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E4B149B1D964BD700E77CE4 /* Build configuration list for PBXNativeTarget "CephalopodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E4B14991D964BD700E77CE4 /* Debug */,
+				7E4B149A1D964BD700E77CE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7E5029691D962C1A008140D9 /* Build configuration list for PBXProject "Cephalopod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -833,6 +965,7 @@
 				7E5029CB1D962E49008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E5029D61D962E64008140D9 /* Build configuration list for PBXNativeTarget "Cephalopod-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -841,6 +974,7 @@
 				7E5029D81D962E64008140D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
