@@ -47,7 +47,7 @@ Setup a [previous version](https://github.com/evgenyneu/Auk/wiki/Legacy-Swift-ve
 
 ## Usage
 
-The following example shows how to play a [squid.mp3](https://github.com/evgenyneu/Cephalopod/raw/master/Demo-iOS/Sounds/squid.mp3) file with a fade in effect.
+The following example shows how to play an mp3 file with a fade in effect.
 
 ```Swift
 var playerInstance: AVAudioPlayer?
