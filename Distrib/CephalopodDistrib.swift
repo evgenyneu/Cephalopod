@@ -1,5 +1,5 @@
 //
-// A sound fader for AvAudioPlayer written in Swift for iOS, tvOS, macOS and watchOS.
+// A sound fader for AvAudioPlayer written in Swift for iOS, tvOS and macOS.
 //
 // https://github.com/evgenyneu/Cephalopod
 //
@@ -213,7 +213,7 @@ open class Cephalopod: NSObject {
    
   - parameter fromVolume: the starting volume, a value from 0 to 1.
    
-  - parameter endVolume: the end volume that will be reached at the end of the fade, a value from 0 to 1.
+  - parameter toVolume: the end volume that will be reached at the end of the fade, a value from 0 to 1.
    
   - parameter duration: duration of the fade, in seconds. Default duration: 3 seconds.
    
