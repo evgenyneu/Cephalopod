@@ -125,6 +125,14 @@ cephalopod?.volumeAlterationsPerSecond = 20
 
 Larger numbers will produce finer fade effect at expense of CPU juice. Default value: `30`.
 
+### Stop volume change
+
+One can cancel the ongoing volume change by calling the `stop()` method. Note that it stops changing the volume but does not stop the playback.
+
+```Swift
+cephalopod?.stop()
+```
+
 ## Volume functions
 
 The following graph shows how sound volume changes during the fade.
