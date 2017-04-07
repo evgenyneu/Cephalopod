@@ -1,11 +1,9 @@
 # Cephalopod, a sound fader for AvAudioPlayer written in Swift - iOS, tvOS and macOS
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
-[![CocoaPods Version](https://img.shields.io/cocoapods/v/Cephalopod.svg?style=flat)][cocoadocs]
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/Cephalopod.svg?style=flat)](http://cocoadocs.org/docsets/Cephalopod)
 [![License](https://img.shields.io/cocoapods/l/Cephalopod.svg?style=flat)](LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/Cephalopod.svg?style=flat)][cocoadocs]
-[cocoadocs]: http://cocoadocs.org/docsets/Cephalopod
-[carthage]: https://github.com/Carthage/Carthage
+[![Platform](https://img.shields.io/cocoapods/p/Cephalopod.svg?style=flat)](http://cocoadocs.org/docsets/Cephalopod)
 
 This library can help fading sounds in and out with AvAudioPlayer. One can set duration, velocity of the fade and a completion function. Velocity can vary from linear to exponential.
 
