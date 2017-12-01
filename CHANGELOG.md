@@ -1,5 +1,9 @@
 # Cephalopod version history
 
+## 2.0.0 (2017-12-01)
+
+* Update to Swift 4.
+
 ## 1.0.1 (2016-09-24)
 
 * Add unit tests.

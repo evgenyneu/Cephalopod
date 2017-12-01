@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "Cephalopod"
-  s.version     = "1.0.1"
+  s.version     = "2.0.0"
   s.license     = { :type => "MIT" }
   s.homepage    = "https://github.com/evgenyneu/Cephalopod"
   s.summary     = "A sound fader for AVAudioPlayer written in Swift."

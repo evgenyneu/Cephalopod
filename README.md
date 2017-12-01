@@ -18,7 +18,7 @@ cephalopod?.fadeIn()
 *Juvenile cuttlefish camouflaged against the seafloor. Photo taken by [Raul654](https://en.wikipedia.org/wiki/User:Raul654). Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Camouflage.jpg).*
 
 
-## Setup (Swift 3.0 / Xcode 8)
+## Setup
 
 There are three ways you can add Cephalopod to your Xcode project.
 
@@ -29,7 +29,7 @@ Simply add the [CephalopodDistrib.swift](https://github.com/evgenyneu/Cephalopod
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, add `github "evgenyneu/Cephalopod" ~> 1.0` to your Cartfile and run `carthage update`.
+Alternatively, add `github "evgenyneu/Cephalopod" ~> 2.0` to your Cartfile and run `carthage update`.
 
 #### Setup with CocoaPods (iOS 8+)
 
@@ -38,7 +38,7 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 ```
 use_frameworks!
 target 'Your target name'
-pod 'Cephalopod', '~> 1.0'
+pod 'Cephalopod', '~> 2.0'
 ```
 
 
