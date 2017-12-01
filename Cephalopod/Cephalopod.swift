@@ -41,8 +41,11 @@ open class Cephalopod: NSObject {
   */
   open var volumeAlterationsPerSecond = 30.0
   
-  static let defaultFadeDurationSeconds = 3.0
-  static let defaultVelocity = 2.0
+  /// Default duration of the fade effect
+  open static let defaultFadeDurationSeconds = 3.0
+    
+  /// Default velocity of the fade effect
+  open static let defaultVelocity = 2.0
 
   let player: AVAudioPlayer
   var timer: AutoCancellingTimer?

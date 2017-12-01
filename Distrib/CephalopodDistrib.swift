@@ -78,7 +78,7 @@ final class AutoCancellingTimerInstance: NSObject {
     timer?.invalidate()
   }
   
-  func timerFired(_ timer: Timer) {
+  @objc func timerFired(_ timer: Timer) {
     self.callback()
     if !repeats { cancel() }
   }
@@ -134,8 +134,11 @@ open class Cephalopod: NSObject {
   */
   open var volumeAlterationsPerSecond = 30.0
   
-  static let defaultFadeDurationSeconds = 3.0
-  static let defaultVelocity = 2.0
+  /// Default duration of the fade effect
+  open static let defaultFadeDurationSeconds = 3.0
+    
+  /// Default velocity of the fade effect
+  open static let defaultVelocity = 2.0
 
   let player: AVAudioPlayer
   var timer: AutoCancellingTimer?

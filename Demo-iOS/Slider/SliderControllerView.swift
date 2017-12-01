@@ -60,7 +60,7 @@ class SliderControllerView: UIView {
     SliderControllerView.positionSlider(label, slider: slider, superview: self)
   }
 
-  func sliderChanged(_ slider: UISlider) {
+  @objc func sliderChanged(_ slider: UISlider) {
 
     if defaults.step != 0 {
       slider.value = Float(defaults.step * round(Double(slider.value) / defaults.step))
@@ -76,7 +76,7 @@ class SliderControllerView: UIView {
       valueNames: defaults.valueNames)
   }
 
-  func sliderChangeEnded(_ slider: UISlider) {
+  @objc func sliderChangeEnded(_ slider: UISlider) {
     delegate?.sliderControllerDelegate_OnChangeEnded()
   }
 
