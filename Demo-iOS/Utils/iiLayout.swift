@@ -25,15 +25,15 @@ class iiLayout {
 
   class func alignTop(_ view: UIView, anotherView: UIView, margin:CGFloat = 0) {
     view.superview?.addConstraint(
-      NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.top,
-        relatedBy: NSLayoutRelation.equal, toItem: anotherView,
-        attribute: NSLayoutAttribute.top, multiplier: 1, constant: margin))
+      NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.top,
+                         relatedBy: NSLayoutConstraint.Relation.equal, toItem: anotherView,
+                         attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: margin))
   }
 
   class func alignBottom(_ view: UIView, anotherView: UIView, margin:CGFloat = 0) {
     view.superview?.addConstraint(
-      NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.bottom,
-        relatedBy: NSLayoutRelation.equal, toItem: anotherView,
-        attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: margin))
+      NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.bottom,
+                         relatedBy: NSLayoutConstraint.Relation.equal, toItem: anotherView,
+                         attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: margin))
   }
 }

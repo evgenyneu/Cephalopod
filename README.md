@@ -29,7 +29,7 @@ Simply add the [CephalopodDistrib.swift](https://github.com/evgenyneu/Cephalopod
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, add `github "evgenyneu/Cephalopod" ~> 2.0` to your Cartfile and run `carthage update`.
+Alternatively, add `github "evgenyneu/Cephalopod" ~> 3.0` to your Cartfile and run `carthage update`.
 
 #### Setup with CocoaPods (iOS 8+)
 
@@ -38,7 +38,7 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 ```
 use_frameworks!
 target 'Your target name'
-pod 'Cephalopod', '~> 2.0'
+pod 'Cephalopod', '~> 3.0'
 ```
 
 
