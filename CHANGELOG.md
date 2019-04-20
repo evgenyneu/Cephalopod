@@ -1,5 +1,10 @@
 # Cephalopod version history
 
+## 4.0.0 (2019-04-20)
+
+* Updated to Swift 5.0.
+
+
 ## 3.0.0 (2018-09-22)
 
 * Updated to Swift 4.2.

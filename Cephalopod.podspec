@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "Cephalopod"
-  s.version     = "3.0.0"
+  s.version     = "4.0.0"
   s.license     = { :type => "MIT" }
   s.homepage    = "https://github.com/evgenyneu/Cephalopod"
   s.summary     = "A sound fader for AVAudioPlayer written in Swift."
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
   s.tvos.deployment_target = "9.0"
-  s.swift_version = "4.2"
+  s.swift_versions = ["4.2", "5.0"]
 end
