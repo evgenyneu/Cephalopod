@@ -46,25 +46,37 @@ final class AutoCancellingTimer {
 
 final class AutoCancellingTimerInstance: NSObject {
   private let repeats: Bool
-  private var timer: Timer?
-  private var callback: ()->()
-  
-  init(interval: TimeInterval, repeats: Bool = false, callback: @escaping ()->()) {
+  private var callback: () -> Void
+  private var interval: TimeInterval
+  private var workItem: DispatchWorkItem?
+
+  init(interval: TimeInterval, repeats: Bool = false, callback: @escaping () -> Void) {
     self.repeats = repeats
     self.callback = callback
-    
+    self.interval = interval
+
     super.init()
-    
-    timer = Timer.scheduledTimer(timeInterval: interval, target: self,
-                                 selector: #selector(AutoCancellingTimerInstance.timerFired(_:)), userInfo: nil, repeats: repeats)
+
+    scheduleTimer()
   }
-  
+
   func cancel() {
-    timer?.invalidate()
+    workItem?.cancel()
   }
-  
-  @objc func timerFired(_ timer: Timer) {
+
+  private func scheduleTimer() {
+    let workItem = DispatchWorkItem { [weak self] in
+      self?.timerFired()
+    }
+    self.workItem = workItem
+
+    cephalopodDispatchQueue.asyncAfter(deadline: .now() + .microseconds(Int(interval * 1_000_000)), execute: workItem)
+  }
+
+  func timerFired() {
     self.callback()
-    if !repeats { cancel() }
+    if repeats { scheduleTimer() }
   }
 }
+
+let cephalopodDispatchQueue = DispatchQueue(label: "Cephalopod Queue")
